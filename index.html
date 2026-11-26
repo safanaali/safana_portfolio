@@ -371,22 +371,30 @@
         margin-top: 16px;
       }
 
+      /* Selected work uses the same light, neutral palette as the rest of the site. */
       section.dark {
-        background: var(--dark);
-        color: #c9bdb0;
-        border-top: 0;
+        background: var(--soft);
+        color: var(--text);
+        border-top: 1px solid var(--line);
       }
       section.dark h2.t,
       section.dark h3 {
-        color: #f4ece3;
+        color: var(--ink);
       }
       section.dark .eyebrow,
       section.dark .note {
-        color: #8f8272;
+        color: var(--mute);
       }
       section.dark .card {
-        background: #1d1916;
-        border-color: #322b25;
+        background: #ffffff;
+        border-color: var(--line);
+      }
+      section.dark .card p {
+        color: var(--text);
+      }
+      section.dark .project-cta {
+        color: var(--ink);
+        border-top-color: var(--line);
       }
 
       footer {
@@ -445,7 +453,7 @@
     <header>
       <div class="wrap">
         <nav aria-label="Main">
-          <a class="logo" href="#top">S<span> /</span></a>
+          <a class="logo" href="#top">S<span>Safana</span></a>
           <ul>
             <li><a href="#journey">Journey</a></li>
             <li><a href="#about">About</a></li>
@@ -614,9 +622,10 @@
 
     <script>
       (function () {
-        var g = "#1a1613",
-          m = "#a68a64",
-          p = "#e8ddd2";
+        // Cool slate and soft-grey tones to match the white/grey portfolio theme.
+        var g = "#344454",
+          m = "#8b9aaa",
+          p = "#e6ebf0";
         function svg(x) {
           return (
             '<svg viewBox="0 0 320 260" role="img" aria-hidden="true">' +
