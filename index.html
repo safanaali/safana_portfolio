@@ -44,4 +44,132 @@ nav ul a:hover{color:var(--ink);text-decoration:underline}
 .arrows{display:flex;gap:8px}
 .arrows button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:1.1rem;cursor:pointer}
 .arrows button:hover{background:var(--soft)}
-.explor
+.explore{display:inline-block;margin-top:18px;color:var(--ink);font-weight:600}
+/* sections */
+section.s{padding:64px 0;border-top:1px solid var(--line)}
+section.alt{background:var(--soft)}
+.s h2.t{font-size:2rem;color:var(--ink);font-weight:800;margin-bottom:24px;letter-spacing:-.01em}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px}
+.card h3{color:var(--ink);font-size:1.15rem;margin-bottom:6px}
+.card .meta{color:var(--mid);font-size:.9rem;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.tags li{border:1px solid var(--line);background:#fff;padding:6px 14px;border-radius:99px;font-size:.92rem}
+.note{color:var(--mid);font-size:.9rem;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:32px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:760px){.stage{grid-template-columns:1fr}.art{border-right:0;border-bottom:1px solid var(--line)}nav ul{gap:14px;font-size:.85rem}.txt{padding:24px}}
+@media(prefers-reduced-motion:no-preference){.fade{animation:fd .35s ease}@keyframes fd{from{opacity:0}to{opacity:1}}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#top">Safana</a>
+<ul><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#certs">Certifications</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
+
+<main id="top">
+<div class="wrap journey">
+  <h1>My journey</h1>
+  <p class="sub">From engineering graduate to Infosys developer, a planned career break, and a return as a certified ServiceNow professional.</p>
+
+  <div class="car" role="region" aria-roledescription="carousel" aria-label="Career journey">
+    <div class="stage" id="stage" aria-live="polite">
+      <div class="art" id="art"></div>
+      <div class="txt">
+        <small id="when"></small>
+        <h2 id="title"></h2>
+        <p id="body"></p>
+        <div class="fact" id="fact"></div>
+        <a class="explore" id="link" href="#work" hidden>See the projects</a>
+      </div>
+    </div>
+    <div class="ctrl">
+      <div class="dots" id="dots" role="group" aria-label="Choose slide"></div>
+      <div class="right"><span class="count" id="count"></span><div class="arrows"><button id="prev" aria-label="Previous slide">&#8592;</button><button id="next" aria-label="Next slide">&#8594;</button></div></div>
+    </div>
+  </div>
+</div>
+
+<section class="s alt" id="about"><div class="wrap">
+  <h2 class="t">About</h2>
+  <p style="max-width:68ch">I am a software professional with nearly four years of experience at Infosys, now building a career in ServiceNow. I hold the CSA certification, led the Society360 capstone, and am working through application development. My earlier work with Java, JavaScript, SQL and enterprise delivery shapes how I design ServiceNow applications.</p>
+</div></section>
+
+<section class="s" id="work"><div class="wrap">
+  <h2 class="t">Work and projects</h2>
+  <div class="cols">
+    <div class="card"><h3>Society360</h3><p class="meta">ServiceNow RiseUp capstone | First place</p><p>A society management portal, including a visitor management module, built as a team on ServiceNow. I led the project.</p></div>
+    <div class="card"><h3>Workspace Reservation Management</h3><p class="meta">Application development course | In progress</p><p>A ServiceNow application built through sprint-based coursework as part of my CAD preparation.</p></div>
+    <div class="card"><h3>Software developer, Infosys</h3><p class="meta">Nearly 4 years | Bravo and Champ awards</p><p>Delivered on enterprise projects across development and business analysis.</p></div>
+  </div>
+  <p class="note">Add a GitHub or demo link to each card once it is ready to share.</p>
+</div></section>
+
+<section class="s alt" id="certs"><div class="wrap">
+  <h2 class="t">Certifications</h2>
+  <div class="cols">
+    <div class="card"><h3>ServiceNow Certified System Administrator</h3><p class="meta">Completed</p></div>
+    <div class="card"><h3>ServiceNow micro-certifications</h3><p class="meta">Completed | list them here from your CV</p></div>
+    <div class="card"><h3>Certified Application Developer</h3><p class="meta">Preparing</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="skills"><div class="wrap">
+  <h2 class="t">Skills</h2>
+  <ul class="tags">
+    <li>ServiceNow App Engine Studio</li><li>ServiceNow Administration</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>XML</li><li>Informatica</li><li>UNIX</li><li>JIRA</li><li>Business analysis</li>
+  </ul>
+</div></section>
+
+<section class="s alt" id="contact"><div class="wrap">
+  <h2 class="t">Contact</h2>
+  <p>Open to remote ServiceNow roles.</p>
+  <p style="margin-top:10px"><a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a> | <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> | <a href="https://github.com/safanaali">GitHub</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>&copy; <span id="yr"></span> Safana</span><a href="#top">Back to top</a></div></footer>
+
+<script>
+(function(){
+  var g="#18181b",m="#a1a1aa",p="#f4f4f5";
+  function svg(x){return '<svg viewBox="0 0 320 260" role="img" aria-hidden="true">'+x+'</svg>';}
+  var slides=[
+   {tab:"Foundation",when:"The foundation",title:"B.E. in Electrical and Electronics Engineering",
+    body:"Graduated with 76.12%, First Class with Distinction. This is where the problem-solving habit started.",fact:"B.E., 76.12%",
+    art:svg('<rect x="40" y="170" width="240" height="14" fill="'+g+'"/><rect x="60" y="184" width="200" height="10" fill="'+m+'"/><polygon points="160,50 270,100 160,150 50,100" fill="'+g+'"/><polygon points="160,62 245,100 160,138 75,100" fill="'+p+'"/><line x1="270" y1="100" x2="270" y2="150" stroke="'+g+'" stroke-width="4"/><circle cx="270" cy="154" r="7" fill="'+m+'"/>')},
+   {tab:"Infosys",when:"The professional beginning",title:"Software development at Infosys",
+    body:"Nearly four years on enterprise projects, recognised with the Bravo and Champ awards.",fact:"Bravo and Champ awards",
+    art:svg('<rect x="50" y="50" width="220" height="140" fill="'+p+'" stroke="'+g+'" stroke-width="4"/><rect x="50" y="50" width="220" height="22" fill="'+g+'"/><path d="M95 105 L75 125 L95 145" fill="none" stroke="'+g+'" stroke-width="6"/><path d="M225 105 L245 125 L225 145" fill="none" stroke="'+g+'" stroke-width="6"/><line x1="175" y1="100" x2="145" y2="150" stroke="'+m+'" stroke-width="6"/><rect x="120" y="190" width="80" height="14" fill="'+g+'"/><rect x="95" y="204" width="130" height="8" fill="'+m+'"/>')},
+   {tab:"Career break",when:"A different chapter",title:"A planned career break",
+    body:"Time focused on family, while I kept learning and tutoring.",fact:"Family first, learning throughout",
+    art:svg('<path d="M60 200 L60 90 Q110 70 160 90 L160 200 Q110 180 60 200Z" fill="'+p+'" stroke="'+g+'" stroke-width="4"/><path d="M160 90 Q210 70 260 90 L260 200 Q210 180 160 200Z" fill="'+p+'" stroke="'+g+'" stroke-width="4"/><line x1="85" y1="115" x2="140" y2="108" stroke="'+m+'" stroke-width="4"/><line x1="85" y1="135" x2="140" y2="128" stroke="'+m+'" stroke-width="4"/><line x1="185" y1="108" x2="240" y2="115" stroke="'+m+'" stroke-width="4"/><line x1="185" y1="128" x2="240" y2="135" stroke="'+m+'" stroke-width="4"/><circle cx="160" cy="48" r="14" fill="'+g+'"/>')},
+   {tab:"Comeback",when:"The comeback",title:"ServiceNow RiseUp and CSA",
+    body:"Became a Certified System Administrator and led the Society360 capstone to first place.",fact:"CSA certified, Society360 first place",link:true,
+    art:svg('<rect x="60" y="150" width="60" height="50" fill="'+m+'"/><rect x="130" y="110" width="60" height="90" fill="'+g+'"/><rect x="200" y="150" width="60" height="50" fill="'+m+'"/><polygon points="160,40 169,64 195,64 174,79 182,104 160,89 138,104 146,79 125,64 151,64" fill="'+g+'"/>')},
+   {tab:"Next",when:"What's next",title:"Application development",
+    body:"Currently learning ServiceNow Application Development and preparing for the CAD exam.",fact:"Goal: Certified Application Developer",
+    art:svg('<path d="M40 210 L110 210 L110 170 L180 170 L180 130 L250 130 L250 90" fill="none" stroke="'+g+'" stroke-width="6"/><circle cx="110" cy="210" r="8" fill="'+g+'"/><circle cx="180" cy="170" r="8" fill="'+g+'"/><circle cx="250" cy="130" r="8" fill="'+m+'"/><polygon points="250,50 275,90 225,90" fill="'+g+'"/>')}
+  ];
+  var n=slides.length,i=0,dots=document.getElementById('dots');
+  function $(id){return document.getElementById(id)}
+  for(var k=0;k<n;k++){(function(k){var b=document.createElement('button');b.type='button';b.textContent=slides[k].tab;b.onclick=function(){go(k)};dots.appendChild(b)})(k)}
+  function go(x){
+    i=(x+n)%n;var s=slides[i];
+    $('art').innerHTML=s.art;$('when').textContent=s.when;$('title').textContent=s.title;
+    $('body').textContent=s.body;$('fact').textContent=s.fact;$('link').hidden=!s.link;
+    $('count').textContent=(i+1)+' / '+n;
+    Array.prototype.forEach.call(dots.children,function(b,j){b.setAttribute('aria-current',j===i)});
+    var st=$('stage');st.classList.remove('fade');void st.offsetWidth;st.classList.add('fade');
+  }
+  $('prev').onclick=function(){go(i-1)};
+  $('next').onclick=function(){go(i+1)};
+  document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')go(i-1);if(e.key==='ArrowRight')go(i+1)});
+  $('yr').textContent=new Date().getFullYear();
+  go(0);
+})();
+</script>
+</body>
+</html>
