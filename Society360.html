@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Society360 | Safana</title>
+    <meta
+      name="description"
+      content="A ServiceNow society management portal developed as a team capstone. I led the project and contributed to building a more organised digital experience for residents and society administrators."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f7f8fa;
+        --soft: #eef1f4;
+        --line: #dce1e6;
+        --ink: #202832;
+        --text: #4b5563;
+        --mute: #77818c;
+        --accent: #788797;
+        --max: 1080px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: "DM Sans", system-ui, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: auto;
+        padding: 0 24px;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        color: var(--ink);
+        font-weight: 500;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: rgba(247, 248, 250, 0.94);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      .logo span {
+        color: var(--accent);
+      }
+      nav a.back {
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .hero {
+        padding: 76px 0 48px;
+      }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--mute);
+        font-weight: 600;
+      }
+      h1 {
+        font-size: clamp(2.8rem, 7vw, 5rem);
+        line-height: 1.02;
+        margin: 12px 0 18px;
+        max-width: 16ch;
+      }
+      h1 em,
+      h2 em {
+        color: var(--accent);
+      }
+      .lead {
+        max-width: 68ch;
+        font-size: 1.05rem;
+      }
+      section {
+        padding: 54px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 8px 0 24px;
+      }
+      .media-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+      .media-slot {
+        background: white;
+        border: 1px solid var(--line);
+        padding: 12px;
+        border-radius: 8px;
+      }
+      .media-slot img,
+      .media-slot video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16/10;
+        object-fit: cover;
+        background: var(--soft);
+        border-radius: 4px;
+      }
+      .media-slot figcaption {
+        font-size: 0.82rem;
+        color: var(--mute);
+        padding: 10px 2px 2px;
+      }
+      .video-wrap {
+        max-width: 850px;
+      }
+      video {
+        width: 100%;
+        background: #202832;
+        border-radius: 8px;
+      }
+      .placeholder {
+        padding: 26px;
+        background: var(--soft);
+        border: 1px dashed #b8c2cc;
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--mute);
+        font-size: 0.85rem;
+      }
+      @media (max-width: 650px) {
+        .hero {
+          padding: 52px 0 36px;
+        }
+      }
+
+      ul {
+        padding-left: 1.2rem;
+        margin-top: 14px;
+      }
+      li {
+        margin: 7px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <nav>
+          <a class="logo" href="../index.html">S<span> /</span></a
+          ><a class="back" href="../index.html#work">← Back to portfolio</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap hero">
+        <span class="eyebrow">RiseUp capstone · First place</span>
+        <h1>Society360</h1>
+        <p class="lead">
+          A ServiceNow society management portal developed as a team capstone. I
+          led the project and contributed to building a more organised digital
+          experience for residents and society administrators.
+        </p>
+      </div>
+      <section>
+        <div class="wrap">
+          <span class="eyebrow">Project overview</span>
+          <h2>What it <em>does</em></h2>
+          <p class="lead">
+            Society360 brings common society-management activities into one
+            portal, helping residents raise and track requests while making
+            information and services easier to access.
+          </p>
+          <ul>
+            <li>Resident-facing society management portal</li>
+            <li>Visitor management module</li>
+            <li>
+              ServiceNow capabilities including Service Portal and Flow Designer
+            </li>
+            <li>Knowledge-based support and request handling</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <span class="eyebrow">Project gallery</span>
+          <h2>Screenshots &amp; <em>images</em></h2>
+          <p class="lead">
+            Add your project screenshots to <code>assets/society360/</code>,
+            then replace the sample image paths below with your file names.
+          </p>
+          <div class="media-grid" style="margin-top: 22px">
+            <figure class="media-slot">
+              <img
+                src="../assets/society360/screenshot-1.jpg"
+                alt="Society360 screenshot 1"
+              />
+              <figcaption>Screen 1 — replace with your screenshot</figcaption>
+            </figure>
+            <figure class="media-slot">
+              <img
+                src="../assets/society360/screenshot-2.jpg"
+                alt="Society360 screenshot 2"
+              />
+              <figcaption>Screen 2 — replace with your screenshot</figcaption>
+            </figure>
+            <figure class="media-slot">
+              <img
+                src="../assets/society360/screenshot-3.jpg"
+                alt="Society360 screenshot 3"
+              />
+              <figcaption>Screen 3 — replace with your screenshot</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <span class="eyebrow">Walkthrough</span>
+          <h2>Project <em>video</em></h2>
+          <div class="video-wrap">
+            <div class="placeholder">
+              To add a video, put an MP4 file in
+              <code>assets/society360/</code> and replace
+              <code>project-demo.mp4</code> in the video source below. You can
+              also use a YouTube embed if your demo is hosted there.
+            </div>
+            <video controls preload="metadata" style="margin-top: 16px">
+              <source
+                src="../assets/society360/project-demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support HTML video.
+            </video>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        © <span id="yr"></span> Safana ·
+        <a href="../index.html">Portfolio home</a>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
