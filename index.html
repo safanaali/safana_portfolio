@@ -11,19 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <style>
-     :root {
-  --bg: #ffffff;
-  --soft: #f1f8f3;
-  --line: #cfe3d6;
-  --mid: #581111;
-  --text: #33443a;
-  --ink: #14532d;
-  --max: 1080px;
-}
+      :root {
+        --bg: #f1e9e1;
+        --soft: #e8ddd2;
+        --line: #d6c8b9;
+        --ink: #1a1613;
+        --text: #4a4038;
+        --mute: #7d6f63;
+        --accent: #a68a64;
+        --dark: #14110f;
+        --max: 1080px;
+      }
       * {
         box-sizing: border-box;
         margin: 0;
@@ -32,18 +34,17 @@
         scroll-behavior: smooth;
       }
       body {
-        font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI",
-          sans-serif;
+        font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
         color: var(--text);
         background: var(--bg);
-        line-height: 1.65;
-        font-size: 17px;
+        line-height: 1.7;
+        font-size: 16px;
       }
       a {
         color: inherit;
       }
       :focus-visible {
-        outline: 3px solid var(--ink);
+        outline: 2px solid var(--accent);
         outline-offset: 3px;
       }
       .wrap {
@@ -51,13 +52,32 @@
         margin: 0 auto;
         padding: 0 24px;
       }
+      h1,
+      h2,
+      h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      em {
+        color: var(--accent);
+        font-style: italic;
+      }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--mute);
+        font-weight: 600;
+      }
+
       header {
-        border-bottom: 1px solid var(--line);
         position: sticky;
         top: 0;
-        background: rgba(255, 255, 255, 0.94);
-        backdrop-filter: blur(6px);
         z-index: 5;
+        background: rgba(241, 233, 225, 0.92);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid var(--line);
       }
       nav {
         display: flex;
@@ -65,46 +85,93 @@
         align-items: center;
         height: 64px;
       }
-      nav .logo {
-        font-weight: 800;
-        font-size: 1.25rem;
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        font-weight: 600;
         color: var(--ink);
         text-decoration: none;
+      }
+      .logo span {
+        color: var(--accent);
+        font-weight: 400;
       }
       nav ul {
         display: flex;
-        gap: 22px;
+        gap: 28px;
         list-style: none;
         padding: 0;
-        font-size: 0.95rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
       }
       nav ul a {
         text-decoration: none;
+        color: var(--text);
       }
       nav ul a:hover {
-        color: var(--ink);
-        text-decoration: underline;
+        color: var(--accent);
       }
-      /* carousel */
+
+      .hero {
+        padding: 88px 0 56px;
+      }
+      .hero h1 {
+        font-size: clamp(2.8rem, 7vw, 5.2rem);
+        line-height: 1.02;
+        letter-spacing: -0.01em;
+        max-width: 15ch;
+        margin: 16px 0 22px;
+      }
+      .hero p.lead {
+        max-width: 52ch;
+        font-size: 1.05rem;
+      }
+      .btns {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 26px;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid var(--ink);
+      }
+      .btn.fill {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      .btn.fill:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .btn.line:hover {
+        background: var(--soft);
+      }
+
       .journey {
-        padding: 48px 0 32px;
+        padding: 24px 24px 80px;
       }
-      .journey h1 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
-        line-height: 1.05;
-        color: var(--ink);
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        max-width: 14ch;
+      .journey h2 {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        margin: 8px 0 10px;
       }
       .journey .sub {
-        margin: 14px 0 28px;
-        max-width: 52ch;
+        max-width: 54ch;
+        margin-bottom: 28px;
       }
       .car {
         border: 1px solid var(--line);
-        border-radius: 6px;
-        overflow: hidden;
+        background: var(--bg);
       }
       .stage {
         display: grid;
@@ -113,7 +180,7 @@
         min-height: 380px;
       }
       .art {
-        background: #fff;
+        background: var(--bg);
         border-right: 1px solid var(--line);
         display: flex;
         align-items: center;
@@ -122,32 +189,42 @@
       }
       .art svg {
         width: 100%;
-        max-width: 380px;
+        max-width: 360px;
         height: auto;
       }
       .txt {
-        padding: 36px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
       .txt small {
-        color: var(--mid);
-        font-size: 0.9rem;
-      }
-      .txt h2 {
-        color: var(--ink);
-        font-size: 1.7rem;
-        line-height: 1.2;
-        margin: 6px 0 12px;
+        color: var(--accent);
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
         font-weight: 600;
       }
-      .txt .fact {
-        margin-top: 16px;
+      .txt h3 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin: 8px 0 12px;
+      }
+      .fact {
+        margin-top: 18px;
         padding-top: 14px;
         border-top: 1px solid var(--line);
-        font-size: 0.92rem;
-        color: var(--mid);
+        font-size: 0.85rem;
+        color: var(--mute);
+      }
+      .explore {
+        display: inline-block;
+        margin-top: 16px;
+        color: var(--ink);
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
       .ctrl {
         display: flex;
@@ -157,7 +234,7 @@
         flex-wrap: wrap;
         padding: 14px 18px;
         border-top: 1px solid var(--line);
-        background: #fff;
+        background: var(--bg);
       }
       .dots {
         display: flex;
@@ -166,11 +243,11 @@
       }
       .dots button {
         border: 1px solid var(--line);
-        background: #fff;
-        padding: 6px 12px;
+        background: transparent;
+        padding: 6px 14px;
         border-radius: 99px;
         font: inherit;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         cursor: pointer;
         color: var(--text);
       }
@@ -179,7 +256,7 @@
       }
       .dots button[aria-current="true"] {
         background: var(--ink);
-        color: #fff;
+        color: var(--bg);
         border-color: var(--ink);
       }
       .right {
@@ -188,8 +265,8 @@
         gap: 14px;
       }
       .count {
-        color: var(--mid);
-        font-size: 0.9rem;
+        color: var(--mute);
+        font-size: 0.85rem;
         min-width: 3.2em;
         text-align: right;
       }
@@ -201,34 +278,28 @@
         width: 42px;
         height: 42px;
         border-radius: 50%;
-        border: 1px solid var(--line);
-        background: #fff;
-        font-size: 1.1rem;
+        border: 1px solid var(--ink);
+        background: transparent;
+        font-size: 1.05rem;
         cursor: pointer;
+        color: var(--ink);
       }
       .arrows button:hover {
-        background: var(--soft);
+        background: var(--ink);
+        color: var(--bg);
       }
-      .explore {
-        display: inline-block;
-        margin-top: 18px;
-        color: var(--ink);
-        font-weight: 600;
-      }
-      /* sections */
+
       section.s {
-        padding: 64px 0;
+        padding: 80px 0;
         border-top: 1px solid var(--line);
       }
       section.alt {
         background: var(--soft);
       }
       .s h2.t {
-        font-size: 2rem;
-        color: var(--ink);
-        font-weight: 800;
-        margin-bottom: 24px;
-        letter-spacing: -0.01em;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        margin: 8px 0 28px;
+        line-height: 1.1;
       }
       .cols {
         display: grid;
@@ -236,44 +307,65 @@
         gap: 20px;
       }
       .card {
-        background: #fff;
+        background: var(--bg);
         border: 1px solid var(--line);
-        border-radius: 6px;
-        padding: 24px;
+        padding: 28px;
       }
       .card h3 {
-        color: var(--ink);
-        font-size: 1.15rem;
-        margin-bottom: 6px;
+        font-size: 1.5rem;
+        margin-bottom: 4px;
       }
       .card .meta {
-        color: var(--mid);
-        font-size: 0.9rem;
-        margin-bottom: 10px;
+        color: var(--accent);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 12px;
       }
       .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 10px;
         list-style: none;
         padding: 0;
       }
       .tags li {
         border: 1px solid var(--line);
-        background: #fff;
-        padding: 6px 14px;
+        background: var(--bg);
+        padding: 8px 18px;
         border-radius: 99px;
-        font-size: 0.92rem;
+        font-size: 0.9rem;
       }
       .note {
-        color: var(--mid);
-        font-size: 0.9rem;
-        margin-top: 14px;
+        color: var(--mute);
+        font-size: 0.85rem;
+        margin-top: 16px;
       }
+
+      section.dark {
+        background: var(--dark);
+        color: #c9bdb0;
+        border-top: 0;
+      }
+      section.dark h2.t,
+      section.dark h3 {
+        color: #f4ece3;
+      }
+      section.dark .eyebrow,
+      section.dark .note {
+        color: #8f8272;
+      }
+      section.dark .card {
+        background: #1d1916;
+        border-color: #322b25;
+      }
+
       footer {
         border-top: 1px solid var(--line);
         padding: 32px 0;
-        font-size: 0.92rem;
+        font-size: 0.85rem;
+        color: var(--mute);
       }
       footer .wrap {
         display: flex;
@@ -281,6 +373,7 @@
         flex-wrap: wrap;
         gap: 12px;
       }
+
       @media (max-width: 760px) {
         .stage {
           grid-template-columns: 1fr;
@@ -291,10 +384,13 @@
         }
         nav ul {
           gap: 14px;
-          font-size: 0.85rem;
+          font-size: 0.62rem;
         }
         .txt {
           padding: 24px;
+        }
+        .hero {
+          padding: 56px 0 40px;
         }
       }
       @media (prefers-reduced-motion: no-preference) {
@@ -321,7 +417,7 @@
     <header>
       <div class="wrap">
         <nav aria-label="Main">
-          <a class="logo" href="#top">Safana</a>
+          <a class="logo" href="#top">S<span> /</span></a>
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#work">Work</a></li>
@@ -334,13 +430,28 @@
     </header>
 
     <main id="top">
-      <div class="wrap journey">
-        <h1>My journey</h1>
+      <div class="wrap hero">
+        <span class="eyebrow"
+          >ServiceNow developer &middot; IT professional</span
+        >
+        <h1>Building digital experiences that make work <em>simpler.</em></h1>
+        <p class="lead">
+          I'm Safana, a ServiceNow CSA-certified developer with an enterprise
+          software background, building thoughtful applications and automation.
+        </p>
+        <div class="btns">
+          <a class="btn fill" href="#work">Explore my work &#8599;</a>
+          <a class="btn line" href="#contact">Let's connect</a>
+        </div>
+      </div>
+
+      <div class="wrap journey" id="journey">
+        <span class="eyebrow">Career story</span>
+        <h2>My <em>journey</em></h2>
         <p class="sub">
           From engineering graduate to Infosys developer, a planned career
           break, and a return as a certified ServiceNow professional.
         </p>
-
         <div
           class="car"
           role="region"
@@ -351,11 +462,11 @@
             <div class="art" id="art"></div>
             <div class="txt">
               <small id="when"></small>
-              <h2 id="title"></h2>
+              <h3 id="title"></h3>
               <p id="body"></p>
               <div class="fact" id="fact"></div>
               <a class="explore" id="link" href="#work" hidden
-                >See the projects</a
+                >See the projects &rarr;</a
               >
             </div>
           </div>
@@ -379,7 +490,10 @@
 
       <section class="s alt" id="about">
         <div class="wrap">
-          <h2 class="t">About</h2>
+          <span class="eyebrow">About me</span>
+          <h2 class="t">
+            I build ServiceNow apps with an <em>engineer's</em> discipline.
+          </h2>
           <p style="max-width: 68ch">
             I am a software professional with nearly four years of experience at
             Infosys, now building a career in ServiceNow. I hold the CSA
@@ -390,13 +504,14 @@
         </div>
       </section>
 
-      <section class="s" id="work">
+      <section class="s dark" id="work">
         <div class="wrap">
-          <h2 class="t">Work and projects</h2>
+          <span class="eyebrow">Selected work</span>
+          <h2 class="t">Projects built to <em>solve</em> real problems.</h2>
           <div class="cols">
             <div class="card">
               <h3>Society360</h3>
-              <p class="meta">ServiceNow RiseUp capstone | First place</p>
+              <p class="meta">RiseUp capstone &middot; First place</p>
               <p>
                 A society management portal, including a visitor management
                 module, built as a team on ServiceNow. I led the project.
@@ -404,7 +519,7 @@
             </div>
             <div class="card">
               <h3>Workspace Reservation Management</h3>
-              <p class="meta">Application development course | In progress</p>
+              <p class="meta">Application development &middot; In progress</p>
               <p>
                 A ServiceNow application built through sprint-based coursework
                 as part of my CAD preparation.
@@ -412,7 +527,7 @@
             </div>
             <div class="card">
               <h3>Software developer, Infosys</h3>
-              <p class="meta">Nearly 4 years | Bravo and Champ awards</p>
+              <p class="meta">Nearly 4 years &middot; Bravo and Champ awards</p>
               <p>
                 Delivered on enterprise projects across development and business
                 analysis.
@@ -427,6 +542,7 @@
 
       <section class="s alt" id="certs">
         <div class="wrap">
+          <span class="eyebrow">Credentials</span>
           <h2 class="t">Certifications</h2>
           <div class="cols">
             <div class="card">
@@ -435,7 +551,7 @@
             </div>
             <div class="card">
               <h3>ServiceNow micro-certifications</h3>
-              <p class="meta">Completed | list them here from your CV</p>
+              <p class="meta">Completed &middot; list them here from your CV</p>
             </div>
             <div class="card">
               <h3>Certified Application Developer</h3>
@@ -447,6 +563,7 @@
 
       <section class="s" id="skills">
         <div class="wrap">
+          <span class="eyebrow">Toolkit</span>
           <h2 class="t">Skills</h2>
           <ul class="tags">
             <li>ServiceNow App Engine Studio</li>
@@ -465,7 +582,8 @@
 
       <section class="s alt" id="contact">
         <div class="wrap">
-          <h2 class="t">Contact</h2>
+          <span class="eyebrow">Contact</span>
+          <h2 class="t">Let's create something <em>useful</em> together.</h2>
           <p>Open to remote ServiceNow roles.</p>
           <p style="margin-top: 10px">
             <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a> |
@@ -485,9 +603,9 @@
 
     <script>
       (function () {
-        var g = "#18181b",
-          m = "#a1a1aa",
-          p = "#f4f4f5";
+        var g = "#1a1613",
+          m = "#a68a64",
+          p = "#e8ddd2";
         function svg(x) {
           return (
             '<svg viewBox="0 0 320 260" role="img" aria-hidden="true">' +
@@ -576,8 +694,8 @@
             tab: "Comeback",
             when: "The comeback",
             title: "ServiceNow RiseUp and CSA",
-            body: "Became a Certified System Administrator and led the Society360 capstone Project.",
-            fact: "ServiceNow RiseUp Graduate,CSA certified",
+            body: "Became a Certified System Administrator and led the Society360 capstone project.",
+            fact: "ServiceNow RiseUp graduate, CSA certified",
             link: true,
             art: svg(
               '<rect x="60" y="150" width="60" height="50" fill="' +
