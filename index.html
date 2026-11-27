@@ -371,6 +371,16 @@
         font-size: 1.2rem;
       }
 
+      .row-title {
+        font-size: 1.9rem;
+        margin: 40px 0 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--line);
+      }
+      .row-title:first-of-type {
+        margin-top: 10px;
+      }
+
       .tags {
         display: flex;
         flex-wrap: wrap;
@@ -562,6 +572,8 @@
         <div class="wrap">
           <span class="eyebrow">Selected work</span>
           <h2 class="t">Projects built to <em>solve</em> real problems.</h2>
+
+          <h3 class="row-title">ServiceNow projects</h3>
           <div class="cols">
             <a
               class="card project-card"
@@ -587,24 +599,55 @@
               <p class="meta">Application development &middot; In progress</p>
               <p>
                 A ServiceNow application built through sprint-based coursework
-                as part of ServiceNow's App Dev Course.
+                as part of my CAD preparation.
               </p>
               <span class="project-cta"
                 >Explore project <span aria-hidden="true">↗</span></span
               >
             </a>
             <div class="card">
-              <h3>Software developer, Infosys</h3>
-              <p class="meta">Nearly 4 years &middot; Bravo and Champ awards</p>
+              <h3>Update Set Creator &ndash; AI Agent</h3>
+              <p class="meta">ServiceNow &middot; AI agent</p>
               <p>
-                Delivered on enterprise projects across development and business
-                analysis.
+                An AI agent that reads a story and creates a correctly named,
+                scoped update set.
               </p>
             </div>
           </div>
+
+          <h3 class="row-title">Infosys projects</h3>
+          <div class="cols">
+            <div class="card">
+              <h3>LexisNexis &ndash; Informatica Data Transformation</h3>
+              <p class="meta">
+                Senior Systems Engineer, Development &middot; 2012&ndash;2015
+              </p>
+              <p>
+                Built XML data transformation solutions in Informatica Data
+                Transformation, converting source schemas into standardized
+                LexisNexis target schemas, and resolved XML, SQL and
+                transformation issues within strict delivery SLAs. Maintained
+                SOPs, issue logs and a reusable knowledge base, and was the
+                primary technical contact between client and development team
+                across time zones.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Apple Inc. &ndash; Production Support</h3>
+              <p class="meta">
+                Systems Engineer, Production Support &middot; 2011&ndash;2012
+              </p>
+              <p>
+                Delivered Tier-1 and Tier-2 support for Oracle RDBMS and UNIX
+                systems, resolving incidents within SLA with documented root
+                cause analysis.
+              </p>
+            </div>
+          </div>
+
           <p class="note">
-            Select a project to explore its overview, screenshots and demo
-            media.
+            Select a ServiceNow project to explore its overview, screenshots
+            and demo media.
           </p>
         </div>
       </section>
@@ -761,7 +804,7 @@
           },
         ];
 
-        var DELAY = 3000; // time per slide in milliseconds (3000 = 3 seconds)
+        var DELAY = 5000; // time per slide in milliseconds (5000 = 5 seconds)
         var n = slides.length,
           i = 0,
           timer = null,
