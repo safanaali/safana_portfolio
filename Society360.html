@@ -21,10 +21,10 @@
         --line: #dce1e6;
         --ink: #202832;
         --text: #4b5563;
-        --mute: #6b7580;
+        --mute: #77818c;
         --accent: #788797;
         --dark: #252c34;
-        --max: 1160px;
+        --max: 1080px;
       }
       * {
         box-sizing: border-box;
@@ -32,13 +32,14 @@
       }
       html {
         scroll-behavior: smooth;
+        font-size: 112.5%;
       }
       body {
         font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
         color: var(--text);
         background: var(--bg);
         line-height: 1.7;
-        font-size: 18px;
+        font-size: 1rem;
       }
       a {
         color: inherit;
@@ -50,7 +51,7 @@
       .wrap {
         max-width: var(--max);
         margin: 0 auto;
-        padding: 0 28px;
+        padding: 0 24px;
       }
       h1,
       h2,
@@ -64,8 +65,8 @@
         font-style: italic;
       }
       .eyebrow {
-        font-size: 0.85rem;
-        letter-spacing: 0.2em;
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
         color: var(--mute);
         font-weight: 600;
@@ -83,11 +84,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 72px;
+        height: 64px;
       }
       .logo {
         font-family: "Cormorant Garamond", serif;
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 600;
         color: var(--ink);
         text-decoration: none;
@@ -98,11 +99,11 @@
       }
       nav ul {
         display: flex;
-        gap: 30px;
+        gap: 28px;
         list-style: none;
         padding: 0;
-        font-size: 0.85rem;
-        letter-spacing: 0.16em;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
         font-weight: 600;
       }
@@ -126,7 +127,7 @@
       }
       .hero p.lead {
         max-width: 52ch;
-        font-size: 1.15rem;
+        font-size: 1.05rem;
       }
       .btns {
         display: flex;
@@ -138,9 +139,9 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 14px 28px;
-        font-size: 0.85rem;
-        letter-spacing: 0.16em;
+        padding: 13px 26px;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
@@ -159,17 +160,15 @@
       }
 
       .journey {
-        padding: 28px 28px 48px;
+        padding: 12px 24px 36px;
       }
       .journey h2 {
-        font-size: clamp(2.4rem, 5vw, 3.6rem);
-        margin: 8px 0 10px;
-        line-height: 1.1;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        margin: 6px 0 8px;
       }
       .journey .sub {
-        max-width: 58ch;
-        margin-bottom: 22px;
-        font-size: 1.1rem;
+        max-width: 54ch;
+        margin-bottom: 16px;
       }
       .car {
         border: 1px solid var(--line);
@@ -179,7 +178,7 @@
         display: grid;
         grid-template-columns: 1.1fr 1fr;
         background: var(--soft);
-        min-height: 360px;
+        min-height: 300px;
       }
       .art {
         background: var(--bg);
@@ -187,48 +186,45 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 24px;
+        padding: 20px;
       }
       .art svg {
         width: 100%;
-        max-width: 380px;
+        max-width: 360px;
         height: auto;
       }
       .txt {
-        padding: 32px 36px;
+        padding: 22px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
       .txt small {
         color: var(--accent);
-        font-size: 0.85rem;
-        letter-spacing: 0.2em;
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
         font-weight: 600;
       }
       .txt h3 {
-        font-size: 2.5rem;
-        line-height: 1.12;
-        margin: 10px 0 14px;
-      }
-      .txt p {
-        font-size: 1.1rem;
+        font-size: 2rem;
+        line-height: 1.15;
+        margin: 8px 0 12px;
       }
       .fact {
-        margin-top: 20px;
-        padding-top: 16px;
+        margin-top: 18px;
+        padding-top: 14px;
         border-top: 1px solid var(--line);
-        font-size: 1rem;
+        font-size: 0.85rem;
         color: var(--mute);
       }
       .explore {
         display: inline-block;
-        margin-top: 18px;
+        margin-top: 16px;
         color: var(--ink);
         font-weight: 600;
-        font-size: 0.9rem;
-        letter-spacing: 0.1em;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
       .ctrl {
@@ -237,7 +233,7 @@
         justify-content: space-between;
         gap: 12px;
         flex-wrap: wrap;
-        padding: 16px 20px;
+        padding: 14px 18px;
         border-top: 1px solid var(--line);
         background: var(--bg);
       }
@@ -249,10 +245,10 @@
       .dots button {
         border: 1px solid var(--line);
         background: transparent;
-        padding: 8px 16px;
+        padding: 6px 14px;
         border-radius: 99px;
         font: inherit;
-        font-size: 0.92rem;
+        font-size: 0.8rem;
         cursor: pointer;
         color: var(--text);
       }
@@ -271,71 +267,59 @@
       }
       .count {
         color: var(--mute);
-        font-size: 0.95rem;
-        min-width: 3.4em;
+        font-size: 0.85rem;
+        min-width: 3.2em;
         text-align: right;
       }
       .arrows {
         display: flex;
         gap: 8px;
       }
-      .arrows button,
-      .pp {
-        width: 44px;
-        height: 44px;
+      .arrows button {
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
         border: 1px solid var(--ink);
         background: transparent;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         cursor: pointer;
         color: var(--ink);
       }
-      .pp {
-        font-size: 0.8rem;
-      }
-      .arrows button:hover,
-      .pp:hover {
+      .arrows button:hover {
         background: var(--ink);
         color: var(--bg);
       }
 
       section.s {
-        padding: 56px 0;
+        padding: 42px 0;
         border-top: 1px solid var(--line);
       }
       section.alt {
         background: var(--soft);
       }
       .s h2.t {
-        font-size: clamp(2.4rem, 5vw, 3.6rem);
-        margin: 8px 0 22px;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        margin: 6px 0 18px;
         line-height: 1.1;
-      }
-      .s p {
-        font-size: 1.1rem;
       }
       .cols {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 14px;
       }
       .card {
         background: var(--bg);
         border: 1px solid var(--line);
-        padding: 28px;
+        padding: 22px;
       }
       .card h3 {
-        font-size: 1.75rem;
-        line-height: 1.2;
-        margin-bottom: 6px;
-      }
-      .card p {
-        font-size: 1.05rem;
+        font-size: 1.5rem;
+        margin-bottom: 4px;
       }
       .card .meta {
         color: var(--accent);
-        font-size: 0.82rem;
-        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 12px;
@@ -358,47 +342,37 @@
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 24px;
-        padding-top: 16px;
+        margin-top: 22px;
+        padding-top: 14px;
         border-top: 1px solid var(--line);
         color: var(--ink);
-        font-size: 0.88rem;
+        font-size: 0.78rem;
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
       .project-cta span {
-        font-size: 1.2rem;
-      }
-
-      .row-title {
-        font-size: 1.9rem;
-        margin: 40px 0 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--line);
-      }
-      .row-title:first-of-type {
-        margin-top: 10px;
+        font-size: 1.1rem;
       }
 
       .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
         list-style: none;
         padding: 0;
       }
       .tags li {
         border: 1px solid var(--line);
         background: var(--bg);
-        padding: 10px 20px;
+        padding: 8px 18px;
         border-radius: 99px;
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .note {
         color: var(--mute);
-        font-size: 0.95rem !important;
-        margin-top: 18px;
+        font-size: 0.85rem;
+        margin-top: 16px;
       }
 
       /* Selected work uses the same light, neutral palette as the rest of the site. */
@@ -429,8 +403,8 @@
 
       footer {
         border-top: 1px solid var(--line);
-        padding: 26px 0;
-        font-size: 0.95rem;
+        padding: 22px 0;
+        font-size: 0.85rem;
         color: var(--mute);
       }
       footer .wrap {
@@ -441,9 +415,6 @@
       }
 
       @media (max-width: 760px) {
-        body {
-          font-size: 17px;
-        }
         .stage {
           grid-template-columns: 1fr;
         }
@@ -453,13 +424,10 @@
         }
         nav ul {
           gap: 14px;
-          font-size: 0.72rem;
+          font-size: 0.68rem;
         }
         .txt {
-          padding: 24px;
-        }
-        .txt h3 {
-          font-size: 2rem;
+          padding: 20px;
         }
         .hero {
           padding: 38px 0 26px;
@@ -467,7 +435,7 @@
       }
       @media (prefers-reduced-motion: no-preference) {
         .fade {
-          animation: fd 0.4s ease;
+          animation: fd 0.35s ease;
         }
         @keyframes fd {
           from {
@@ -512,12 +480,11 @@
         </p>
         <div
           class="car"
-          id="car"
           role="region"
           aria-roledescription="carousel"
           aria-label="Career journey"
         >
-          <div class="stage" id="stage" aria-live="off">
+          <div class="stage" id="stage" aria-live="polite">
             <div class="art" id="art"></div>
             <div class="txt">
               <small id="when"></small>
@@ -538,17 +505,12 @@
             ></div>
             <div class="right">
               <span class="count" id="count"></span>
-              <button
-                class="pp"
-                id="play"
-                type="button"
-                aria-label="Pause automatic slideshow"
-              >
-                &#10074;&#10074;
-              </button>
               <div class="arrows">
-                <button id="prev" aria-label="Previous slide">&#8592;</button
-                ><button id="next" aria-label="Next slide">&#8594;</button>
+                <button id="play" aria-label="Pause auto-play">
+                  &#10073;&#10073;
+                </button>
+                <button id="prev" aria-label="Previous slide">&#8592;</button>
+                <button id="next" aria-label="Next slide">&#8594;</button>
               </div>
             </div>
           </div>
@@ -558,7 +520,7 @@
       <section class="s alt" id="about">
         <div class="wrap">
           <span class="eyebrow">About me</span>
-          <p style="max-width: 68ch; margin-top: 8px">
+          <p style="max-width: 68ch">
             I am a software professional with nearly four years of experience at
             Infosys, now building a career in ServiceNow. I hold the CSA
             certification, led the Society360 capstone, and am working through
@@ -572,8 +534,6 @@
         <div class="wrap">
           <span class="eyebrow">Selected work</span>
           <h2 class="t">Projects built to <em>solve</em> real problems.</h2>
-
-          <h3 class="row-title">ServiceNow projects</h3>
           <div class="cols">
             <a
               class="card project-card"
@@ -606,48 +566,17 @@
               >
             </a>
             <div class="card">
-              <h3>Update Set Creator &ndash; AI Agent</h3>
-              <p class="meta">ServiceNow &middot; AI agent</p>
+              <h3>Software developer, Infosys</h3>
+              <p class="meta">Nearly 4 years &middot; Bravo and Champ awards</p>
               <p>
-                An AI agent that reads a story and creates a correctly named,
-                scoped update set.
+                Delivered on enterprise projects across development and business
+                analysis.
               </p>
             </div>
           </div>
-
-          <h3 class="row-title">Infosys projects</h3>
-          <div class="cols">
-            <div class="card">
-              <h3>LexisNexis &ndash; Informatica Data Transformation</h3>
-              <p class="meta">
-                Senior Systems Engineer, Development &middot; 2012&ndash;2015
-              </p>
-              <p>
-                Built XML data transformation solutions in Informatica Data
-                Transformation, converting source schemas into standardized
-                LexisNexis target schemas, and resolved XML, SQL and
-                transformation issues within strict delivery SLAs. Maintained
-                SOPs, issue logs and a reusable knowledge base, and was the
-                primary technical contact between client and development team
-                across time zones.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Apple Inc. &ndash; Production Support</h3>
-              <p class="meta">
-                Systems Engineer, Production Support &middot; 2011&ndash;2012
-              </p>
-              <p>
-                Delivered Tier-1 and Tier-2 support for Oracle RDBMS and UNIX
-                systems, resolving incidents within SLA with documented root
-                cause analysis.
-              </p>
-            </div>
-          </div>
-
           <p class="note">
-            Select a ServiceNow project to explore its overview, screenshots
-            and demo media.
+            Select a project to explore its overview, screenshots and demo
+            media.
           </p>
         </div>
       </section>
@@ -734,12 +663,19 @@
             body: "Graduated with 76.12%, First Class with Distinction. This is where the problem-solving habit started.",
             fact: "B.E., 76.12%",
             art: svg(
-              '<rect x="40" y="170" width="240" height="14" fill="' + g + '"/>' +
-              '<rect x="60" y="184" width="200" height="10" fill="' + m + '"/>' +
-              '<polygon points="160,50 270,100 160,150 50,100" fill="' + g + '"/>' +
-              '<polygon points="160,62 245,100 160,138 75,100" fill="' + p + '"/>' +
-              '<line x1="270" y1="100" x2="270" y2="150" stroke="' + g + '" stroke-width="4"/>' +
-              '<circle cx="270" cy="154" r="7" fill="' + m + '"/>'
+              '<rect x="40" y="170" width="240" height="14" fill="' +
+                g +
+                '"/><rect x="60" y="184" width="200" height="10" fill="' +
+                m +
+                '"/><polygon points="160,50 270,100 160,150 50,100" fill="' +
+                g +
+                '"/><polygon points="160,62 245,100 160,138 75,100" fill="' +
+                p +
+                '"/><line x1="270" y1="100" x2="270" y2="150" stroke="' +
+                g +
+                '" stroke-width="4"/><circle cx="270" cy="154" r="7" fill="' +
+                m +
+                '"/>'
             ),
           },
           {
@@ -749,13 +685,23 @@
             body: "Nearly four years on enterprise projects, recognised with the Bravo and Champ awards.",
             fact: "Bravo and Champ awards",
             art: svg(
-              '<rect x="50" y="50" width="220" height="140" fill="' + p + '" stroke="' + g + '" stroke-width="4"/>' +
-              '<rect x="50" y="50" width="220" height="22" fill="' + g + '"/>' +
-              '<path d="M95 105 L75 125 L95 145" fill="none" stroke="' + g + '" stroke-width="6"/>' +
-              '<path d="M225 105 L245 125 L225 145" fill="none" stroke="' + g + '" stroke-width="6"/>' +
-              '<line x1="175" y1="100" x2="145" y2="150" stroke="' + m + '" stroke-width="6"/>' +
-              '<rect x="120" y="190" width="80" height="14" fill="' + g + '"/>' +
-              '<rect x="95" y="204" width="130" height="8" fill="' + m + '"/>'
+              '<rect x="50" y="50" width="220" height="140" fill="' +
+                p +
+                '" stroke="' +
+                g +
+                '" stroke-width="4"/><rect x="50" y="50" width="220" height="22" fill="' +
+                g +
+                '"/><path d="M95 105 L75 125 L95 145" fill="none" stroke="' +
+                g +
+                '" stroke-width="6"/><path d="M225 105 L245 125 L225 145" fill="none" stroke="' +
+                g +
+                '" stroke-width="6"/><line x1="175" y1="100" x2="145" y2="150" stroke="' +
+                m +
+                '" stroke-width="6"/><rect x="120" y="190" width="80" height="14" fill="' +
+                g +
+                '"/><rect x="95" y="204" width="130" height="8" fill="' +
+                m +
+                '"/>'
             ),
           },
           {
@@ -765,13 +711,25 @@
             body: "Time focused on family, while I kept learning and tutoring.",
             fact: "Family first, learning throughout",
             art: svg(
-              '<path d="M60 200 L60 90 Q110 70 160 90 L160 200 Q110 180 60 200Z" fill="' + p + '" stroke="' + g + '" stroke-width="4"/>' +
-              '<path d="M160 90 Q210 70 260 90 L260 200 Q210 180 160 200Z" fill="' + p + '" stroke="' + g + '" stroke-width="4"/>' +
-              '<line x1="85" y1="115" x2="140" y2="108" stroke="' + m + '" stroke-width="4"/>' +
-              '<line x1="85" y1="135" x2="140" y2="128" stroke="' + m + '" stroke-width="4"/>' +
-              '<line x1="185" y1="108" x2="240" y2="115" stroke="' + m + '" stroke-width="4"/>' +
-              '<line x1="185" y1="128" x2="240" y2="135" stroke="' + m + '" stroke-width="4"/>' +
-              '<circle cx="160" cy="48" r="14" fill="' + g + '"/>'
+              '<path d="M60 200 L60 90 Q110 70 160 90 L160 200 Q110 180 60 200Z" fill="' +
+                p +
+                '" stroke="' +
+                g +
+                '" stroke-width="4"/><path d="M160 90 Q210 70 260 90 L260 200 Q210 180 160 200Z" fill="' +
+                p +
+                '" stroke="' +
+                g +
+                '" stroke-width="4"/><line x1="85" y1="115" x2="140" y2="108" stroke="' +
+                m +
+                '" stroke-width="4"/><line x1="85" y1="135" x2="140" y2="128" stroke="' +
+                m +
+                '" stroke-width="4"/><line x1="185" y1="108" x2="240" y2="115" stroke="' +
+                m +
+                '" stroke-width="4"/><line x1="185" y1="128" x2="240" y2="135" stroke="' +
+                m +
+                '" stroke-width="4"/><circle cx="160" cy="48" r="14" fill="' +
+                g +
+                '"/>'
             ),
           },
           {
@@ -782,10 +740,15 @@
             fact: "ServiceNow RiseUp graduate, CSA certified",
             link: true,
             art: svg(
-              '<rect x="60" y="150" width="60" height="50" fill="' + m + '"/>' +
-              '<rect x="130" y="110" width="60" height="90" fill="' + g + '"/>' +
-              '<rect x="200" y="150" width="60" height="50" fill="' + m + '"/>' +
-              '<polygon points="160,40 169,64 195,64 174,79 182,104 160,89 138,104 146,79 125,64 151,64" fill="' + g + '"/>'
+              '<rect x="60" y="150" width="60" height="50" fill="' +
+                m +
+                '"/><rect x="130" y="110" width="60" height="90" fill="' +
+                g +
+                '"/><rect x="200" y="150" width="60" height="50" fill="' +
+                m +
+                '"/><polygon points="160,40 169,64 195,64 174,79 182,104 160,89 138,104 146,79 125,64 151,64" fill="' +
+                g +
+                '"/>'
             ),
           },
           {
@@ -795,30 +758,26 @@
             body: "Currently learning ServiceNow Application Development and preparing for the CAD exam.",
             fact: "Goal: Certified Application Developer",
             art: svg(
-              '<path d="M40 210 L110 210 L110 170 L180 170 L180 130 L250 130 L250 90" fill="none" stroke="' + g + '" stroke-width="6"/>' +
-              '<circle cx="110" cy="210" r="8" fill="' + g + '"/>' +
-              '<circle cx="180" cy="170" r="8" fill="' + g + '"/>' +
-              '<circle cx="250" cy="130" r="8" fill="' + m + '"/>' +
-              '<polygon points="250,50 275,90 225,90" fill="' + g + '"/>'
+              '<path d="M40 210 L110 210 L110 170 L180 170 L180 130 L250 130 L250 90" fill="none" stroke="' +
+                g +
+                '" stroke-width="6"/><circle cx="110" cy="210" r="8" fill="' +
+                g +
+                '"/><circle cx="180" cy="170" r="8" fill="' +
+                g +
+                '"/><circle cx="250" cy="130" r="8" fill="' +
+                m +
+                '"/><polygon points="250,50 275,90 225,90" fill="' +
+                g +
+                '"/>'
             ),
           },
         ];
-
-        var DELAY = 5000; // time per slide in milliseconds (5000 = 5 seconds)
         var n = slides.length,
           i = 0,
-          timer = null,
-          dots = document.getElementById("dots"),
-          reduced =
-            window.matchMedia &&
-            window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-          playing = !reduced, // user's choice: auto-play on or off
-          hovering = false;
-
+          dots = document.getElementById("dots");
         function $(id) {
           return document.getElementById(id);
         }
-
         for (var k = 0; k < n; k++) {
           (function (k) {
             var b = document.createElement("button");
@@ -830,23 +789,7 @@
             dots.appendChild(b);
           })(k);
         }
-
-        function stop() {
-          if (timer) {
-            clearInterval(timer);
-            timer = null;
-          }
-        }
-        function start() {
-          stop();
-          if (playing && !hovering && !document.hidden) {
-            timer = setInterval(function () {
-              go(i + 1, true);
-            }, DELAY);
-          }
-        }
-
-        function go(x, auto) {
+        function go(x) {
           i = (x + n) % n;
           var s = slides[i];
           $("art").innerHTML = s.art;
@@ -863,61 +806,73 @@
           st.classList.remove("fade");
           void st.offsetWidth;
           st.classList.add("fade");
-          if (!auto) start(); // restart the timer after a manual change
-        }
-
-        function setPlaying(v) {
-          playing = v;
-          var pb = $("play");
-          pb.innerHTML = v ? "&#10074;&#10074;" : "&#9654;";
-          pb.setAttribute(
-            "aria-label",
-            v ? "Pause automatic slideshow" : "Play automatic slideshow"
-          );
-          // Announce slide changes to screen readers only when not auto-playing
-          $("stage").setAttribute("aria-live", v ? "off" : "polite");
           start();
         }
-
         $("prev").onclick = function () {
           go(i - 1);
         };
         $("next").onclick = function () {
           go(i + 1);
         };
-        $("play").onclick = function () {
-          setPlaying(!playing);
-        };
-
-        var car = $("car");
-        // Pause while the visitor hovers or has keyboard focus inside the carousel
-        car.addEventListener("mouseenter", function () {
-          hovering = true;
-          stop();
-        });
-        car.addEventListener("mouseleave", function () {
-          hovering = false;
-          start();
-        });
-        car.addEventListener("focusin", function () {
-          hovering = true;
-          stop();
-        });
-        car.addEventListener("focusout", function () {
-          hovering = false;
-          start();
-        });
-        // Pause when the browser tab is in the background
-        document.addEventListener("visibilitychange", start);
-
         document.addEventListener("keydown", function (e) {
           if (e.key === "ArrowLeft") go(i - 1);
           if (e.key === "ArrowRight") go(i + 1);
         });
-
         $("yr").textContent = new Date().getFullYear();
-        go(0, true);
-        setPlaying(playing);
+
+        // ---- Auto-play ----
+        var delay = 6000, // 6 seconds per slide
+          timer = null,
+          paused = false,
+          hover = false,
+          reduce = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches,
+          car = document.querySelector(".car"),
+          play = $("play");
+
+        function stop() {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+        }
+        function start() {
+          stop();
+          if (!paused && !hover && !reduce) {
+            timer = setInterval(function () {
+              go(i + 1);
+            }, delay);
+          }
+        }
+        play.onclick = function () {
+          paused = !paused;
+          play.innerHTML = paused ? "&#9654;" : "&#10073;&#10073;";
+          play.setAttribute(
+            "aria-label",
+            paused ? "Start auto-play" : "Pause auto-play"
+          );
+          start();
+        };
+        car.addEventListener("mouseenter", function () {
+          hover = true;
+          stop();
+        });
+        car.addEventListener("mouseleave", function () {
+          hover = false;
+          start();
+        });
+        car.addEventListener("focusin", function () {
+          hover = true;
+          stop();
+        });
+        car.addEventListener("focusout", function () {
+          hover = false;
+          start();
+        });
+        if (reduce) play.hidden = true;
+
+        go(0);
       })();
     </script>
   </body>
