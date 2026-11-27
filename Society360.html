@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Safana | ServiceNow Developer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Society360 | Safana</title>
     <meta
       name="description"
-      content="Portfolio of Safana: ServiceNow CSA, former Infosys software engineer, Society360 capstone winner."
+      content="A ServiceNow society management portal developed as a team capstone. I led the project and contributed to building a more organised digital experience for residents and society administrators."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,46 +23,66 @@
         --text: #4b5563;
         --mute: #77818c;
         --accent: #788797;
-        --dark: #252c34;
         --max: 1080px;
       }
       * {
         box-sizing: border-box;
         margin: 0;
       }
-      html {
-        scroll-behavior: smooth;
-        font-size: 112.5%;
-      }
       body {
-        font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-family: "DM Sans", system-ui, sans-serif;
         color: var(--text);
         background: var(--bg);
         line-height: 1.7;
-        font-size: 1rem;
       }
       a {
         color: inherit;
       }
-      :focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 3px;
-      }
       .wrap {
         max-width: var(--max);
-        margin: 0 auto;
+        margin: auto;
         padding: 0 24px;
       }
       h1,
       h2,
       h3 {
         font-family: "Cormorant Garamond", Georgia, serif;
+        color: var(--ink);
         font-weight: 500;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: rgba(247, 248, 250, 0.94);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-decoration: none;
         color: var(--ink);
       }
-      em {
+      .logo span {
         color: var(--accent);
-        font-style: italic;
+      }
+      nav a.back {
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .hero {
+        padding: 76px 0 48px;
       }
       .eyebrow {
         font-size: 0.72rem;
@@ -71,809 +91,190 @@
         color: var(--mute);
         font-weight: 600;
       }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 5;
-        background: rgba(247, 248, 250, 0.94);
-        backdrop-filter: blur(6px);
-        border-bottom: 1px solid var(--line);
-      }
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 64px;
-      }
-      .logo {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1.6rem;
-        font-weight: 600;
-        color: var(--ink);
-        text-decoration: none;
-      }
-      .logo span {
-        color: var(--accent);
-        font-weight: 400;
-      }
-      nav ul {
-        display: flex;
-        gap: 28px;
-        list-style: none;
-        padding: 0;
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-      nav ul a {
-        text-decoration: none;
-        color: var(--text);
-      }
-      nav ul a:hover {
-        color: var(--accent);
-      }
-
-      .hero {
-        padding: 48px 0 28px;
-      }
-      .hero h1 {
-        font-size: clamp(2.8rem, 7vw, 5.2rem);
+      h1 {
+        font-size: clamp(2.8rem, 7vw, 5rem);
         line-height: 1.02;
-        letter-spacing: -0.01em;
-        max-width: 15ch;
-        margin: 16px 0 22px;
+        margin: 12px 0 18px;
+        max-width: 16ch;
       }
-      .hero p.lead {
-        max-width: 52ch;
+      h1 em,
+      h2 em {
+        color: var(--accent);
+      }
+      .lead {
+        max-width: 68ch;
         font-size: 1.05rem;
       }
-      .btns {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 30px;
+      section {
+        padding: 54px 0;
+        border-top: 1px solid var(--line);
       }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 13px 26px;
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        font-weight: 600;
-        text-decoration: none;
-        border: 1px solid var(--ink);
+      h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 8px 0 24px;
       }
-      .btn.fill {
-        background: var(--ink);
-        color: var(--bg);
-      }
-      .btn.fill:hover {
-        background: var(--accent);
-        border-color: var(--accent);
-      }
-      .btn.line:hover {
-        background: var(--soft);
-      }
-
-      .journey {
-        padding: 12px 24px 36px;
-      }
-      .journey h2 {
-        font-size: clamp(2rem, 4.5vw, 3rem);
-        margin: 6px 0 8px;
-      }
-      .journey .sub {
-        max-width: 54ch;
-        margin-bottom: 16px;
-      }
-      .car {
-        border: 1px solid var(--line);
-        background: var(--bg);
-      }
-      .stage {
+      .media-grid {
         display: grid;
-        grid-template-columns: 1.1fr 1fr;
-        background: var(--soft);
-        min-height: 300px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
       }
-      .art {
-        background: var(--bg);
-        border-right: 1px solid var(--line);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
+      .media-slot {
+        background: white;
+        border: 1px solid var(--line);
+        padding: 12px;
+        border-radius: 8px;
       }
-      .art svg {
+      .media-slot img,
+      .media-slot video {
         width: 100%;
-        max-width: 360px;
-        height: auto;
-      }
-      .txt {
-        padding: 22px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .txt small {
-        color: var(--accent);
-        font-size: 0.72rem;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-      .txt h3 {
-        font-size: 2rem;
-        line-height: 1.15;
-        margin: 8px 0 12px;
-      }
-      .fact {
-        margin-top: 18px;
-        padding-top: 14px;
-        border-top: 1px solid var(--line);
-        font-size: 0.85rem;
-        color: var(--mute);
-      }
-      .explore {
-        display: inline-block;
-        margin-top: 16px;
-        color: var(--ink);
-        font-weight: 600;
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .ctrl {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
-        padding: 14px 18px;
-        border-top: 1px solid var(--line);
-        background: var(--bg);
-      }
-      .dots {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-      .dots button {
-        border: 1px solid var(--line);
-        background: transparent;
-        padding: 6px 14px;
-        border-radius: 99px;
-        font: inherit;
-        font-size: 0.8rem;
-        cursor: pointer;
-        color: var(--text);
-      }
-      .dots button:hover {
+        display: block;
+        aspect-ratio: 16/10;
+        object-fit: cover;
         background: var(--soft);
+        border-radius: 4px;
       }
-      .dots button[aria-current="true"] {
-        background: var(--ink);
-        color: var(--bg);
-        border-color: var(--ink);
-      }
-      .right {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-      .count {
+      .media-slot figcaption {
+        font-size: 0.82rem;
         color: var(--mute);
-        font-size: 0.85rem;
-        min-width: 3.2em;
-        text-align: right;
+        padding: 10px 2px 2px;
       }
-      .arrows {
-        display: flex;
-        gap: 8px;
+      .video-wrap {
+        max-width: 850px;
       }
-      .arrows button {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        border: 1px solid var(--ink);
-        background: transparent;
-        font-size: 1.05rem;
-        cursor: pointer;
-        color: var(--ink);
+      video {
+        width: 100%;
+        background: #202832;
+        border-radius: 8px;
       }
-      .arrows button:hover {
-        background: var(--ink);
-        color: var(--bg);
-      }
-
-      section.s {
-        padding: 42px 0;
-        border-top: 1px solid var(--line);
-      }
-      section.alt {
+      .placeholder {
+        padding: 26px;
         background: var(--soft);
-      }
-      .s h2.t {
-        font-size: clamp(2rem, 4.5vw, 3rem);
-        margin: 6px 0 18px;
-        line-height: 1.1;
-      }
-      .cols {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 14px;
-      }
-      .card {
-        background: var(--bg);
-        border: 1px solid var(--line);
-        padding: 22px;
-      }
-      .card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 4px;
-      }
-      .card .meta {
-        color: var(--accent);
-        font-size: 0.72rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-bottom: 12px;
-      }
-
-      .project-card {
-        display: flex;
-        flex-direction: column;
-        color: inherit;
-        text-decoration: none;
-        transition: transform 180ms ease, border-color 180ms ease,
-          box-shadow 180ms ease;
-      }
-      .project-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--accent);
-        box-shadow: 0 12px 28px rgba(25, 35, 45, 0.1);
-      }
-      .project-cta {
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 22px;
-        padding-top: 14px;
-        border-top: 1px solid var(--line);
-        color: var(--ink);
-        font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .project-cta span {
-        font-size: 1.1rem;
-      }
-
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        list-style: none;
-        padding: 0;
-      }
-      .tags li {
-        border: 1px solid var(--line);
-        background: var(--bg);
-        padding: 8px 18px;
-        border-radius: 99px;
+        border: 1px dashed #b8c2cc;
+        border-radius: 6px;
         font-size: 0.9rem;
       }
-      .note {
-        color: var(--mute);
-        font-size: 0.85rem;
-        margin-top: 16px;
-      }
-
-      /* Selected work uses the same light, neutral palette as the rest of the site. */
-      section.dark {
-        background: var(--soft);
-        color: var(--text);
-        border-top: 1px solid var(--line);
-      }
-      section.dark h2.t,
-      section.dark h3 {
-        color: var(--ink);
-      }
-      section.dark .eyebrow,
-      section.dark .note {
-        color: var(--mute);
-      }
-      section.dark .card {
-        background: #ffffff;
-        border-color: var(--line);
-      }
-      section.dark .card p {
-        color: var(--text);
-      }
-      section.dark .project-cta {
-        color: var(--ink);
-        border-top-color: var(--line);
-      }
-
       footer {
         border-top: 1px solid var(--line);
-        padding: 22px 0;
-        font-size: 0.85rem;
+        padding: 28px 0;
         color: var(--mute);
+        font-size: 0.85rem;
       }
-      footer .wrap {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 12px;
+      @media (max-width: 650px) {
+        .hero {
+          padding: 52px 0 36px;
+        }
       }
 
-      @media (max-width: 760px) {
-        .stage {
-          grid-template-columns: 1fr;
-        }
-        .art {
-          border-right: 0;
-          border-bottom: 1px solid var(--line);
-        }
-        nav ul {
-          gap: 14px;
-          font-size: 0.68rem;
-        }
-        .txt {
-          padding: 20px;
-        }
-        .hero {
-          padding: 38px 0 26px;
-        }
+      ul {
+        padding-left: 1.2rem;
+        margin-top: 14px;
       }
-      @media (prefers-reduced-motion: no-preference) {
-        .fade {
-          animation: fd 0.35s ease;
-        }
-        @keyframes fd {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
+      li {
+        margin: 7px 0;
       }
     </style>
   </head>
   <body>
     <header>
       <div class="wrap">
-        <nav aria-label="Main">
-          <a class="logo" href="#top">Safana<span> </span></a>
-          <ul>
-            <li><a href="#journey">Journey</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#certs">Certifications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <nav>
+          <a class="logo" href="../index.html">S<span> /</span></a
+          ><a class="back" href="../index.html#work">← Back to portfolio</a>
         </nav>
       </div>
     </header>
-
-    <main id="top">
-      <div class="wrap journey" id="journey">
-        <span class="eyebrow">Career story</span>
-        <h2>My <em>journey</em></h2>
-        <p class="sub">
-          From engineering graduate to Infosys developer, a planned career
-          break, and a return as a certified ServiceNow professional.
+    <main>
+      <div class="wrap hero">
+        <span class="eyebrow">RiseUp capstone · First place</span>
+        <h1>Society360</h1>
+        <p class="lead">
+          A ServiceNow society management portal developed as a team capstone. I
+          led the project and contributed to building a more organised digital
+          experience for residents and society administrators.
         </p>
-        <div
-          class="car"
-          role="region"
-          aria-roledescription="carousel"
-          aria-label="Career journey"
-        >
-          <div class="stage" id="stage" aria-live="polite">
-            <div class="art" id="art"></div>
-            <div class="txt">
-              <small id="when"></small>
-              <h3 id="title"></h3>
-              <p id="body"></p>
-              <div class="fact" id="fact"></div>
-              <a class="explore" id="link" href="#work" hidden
-                >See the projects &rarr;</a
-              >
-            </div>
-          </div>
-          <div class="ctrl">
-            <div
-              class="dots"
-              id="dots"
-              role="group"
-              aria-label="Choose slide"
-            ></div>
-            <div class="right">
-              <span class="count" id="count"></span>
-              <div class="arrows">
-                <button id="play" aria-label="Pause auto-play">
-                  &#10073;&#10073;
-                </button>
-                <button id="prev" aria-label="Previous slide">&#8592;</button>
-                <button id="next" aria-label="Next slide">&#8594;</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <section class="s alt" id="about">
+      <section>
         <div class="wrap">
-          <span class="eyebrow">About me</span>
-          <p style="max-width: 68ch">
-            I am a software professional with nearly four years of experience at
-            Infosys, now building a career in ServiceNow. I hold the CSA
-            certification, led the Society360 capstone, and am working through
-            application development. My earlier work with Java, JavaScript, SQL
-            and enterprise delivery shapes how I design ServiceNow applications.
+          <span class="eyebrow">Project overview</span>
+          <h2>What it <em>does</em></h2>
+          <p class="lead">
+            Society360 brings common society-management activities into one
+            portal, helping residents raise and track requests while making
+            information and services easier to access.
           </p>
-        </div>
-      </section>
-
-      <section class="s dark" id="work">
-        <div class="wrap">
-          <span class="eyebrow">Selected work</span>
-          <h2 class="t">Projects built to <em>solve</em> real problems.</h2>
-          <div class="cols">
-            <a
-              class="card project-card"
-              href="Society360.html"
-              aria-label="Explore the Society360 project"
-            >
-              <h3>Society360</h3>
-              <p class="meta">RiseUp capstone &middot; First place</p>
-              <p>
-                A society management portal, including a visitor management
-                module, built as a team on ServiceNow. I led the project.
-              </p>
-              <span class="project-cta"
-                >Explore project <span aria-hidden="true">↗</span></span
-              >
-            </a>
-            <a
-              class="card project-card"
-              href="projects/workspace-reservation.html"
-              aria-label="Explore the Workspace Reservation Management project"
-            >
-              <h3>Workspace Reservation Management</h3>
-              <p class="meta">Application development &middot; In progress</p>
-              <p>
-                A ServiceNow application built through sprint-based coursework
-                as part of my CAD preparation.
-              </p>
-              <span class="project-cta"
-                >Explore project <span aria-hidden="true">↗</span></span
-              >
-            </a>
-            <div class="card">
-              <h3>Software developer, Infosys</h3>
-              <p class="meta">Nearly 4 years &middot; Bravo and Champ awards</p>
-              <p>
-                Delivered on enterprise projects across development and business
-                analysis.
-              </p>
-            </div>
-          </div>
-          <p class="note">
-            Select a project to explore its overview, screenshots and demo
-            media.
-          </p>
-        </div>
-      </section>
-
-      <section class="s alt" id="certs">
-        <div class="wrap">
-          <span class="eyebrow">Credentials</span>
-          <h2 class="t">Certifications</h2>
-          <div class="cols">
-            <div class="card">
-              <h3>ServiceNow Certified System Administrator</h3>
-              <p class="meta">Completed</p>
-            </div>
-            <div class="card">
-              <h3>ServiceNow micro-certifications</h3>
-              <p class="meta">Completed &middot; list them here from your CV</p>
-            </div>
-            <div class="card">
-              <h3>Certified Application Developer</h3>
-              <p class="meta">Preparing</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="s" id="skills">
-        <div class="wrap">
-          <span class="eyebrow">Toolkit</span>
-          <h2 class="t">Skills</h2>
-          <ul class="tags">
-            <li>ServiceNow App Engine Studio</li>
-            <li>ServiceNow Administration</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-            <li>XML</li>
-            <li>Informatica</li>
-            <li>UNIX</li>
-            <li>JIRA</li>
-            <li>Business analysis</li>
+          <ul>
+            <li>Resident-facing society management portal</li>
+            <li>Visitor management module</li>
+            <li>
+              ServiceNow capabilities including Service Portal and Flow Designer
+            </li>
+            <li>Knowledge-based support and request handling</li>
           </ul>
         </div>
       </section>
-
-      <section class="s alt" id="contact">
+      <section>
         <div class="wrap">
-          <span class="eyebrow">Contact</span>
-          <h2 class="t">Let's create something <em>useful</em> together.</h2>
-          <p>Open to remote ServiceNow roles.</p>
-          <p style="margin-top: 10px">
-            <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a> |
-            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> |
-            <a href="https://github.com/safanaali">GitHub</a>
+          <span class="eyebrow">Project gallery</span>
+          <h2>Screenshots &amp; <em>images</em></h2>
+          <p class="lead">
+            Add your project screenshots to <code>assets/society360/</code>,
+            then replace the sample image paths below with your file names.
           </p>
+          <div class="media-grid" style="margin-top: 22px">
+            <figure class="media-slot">
+              <img
+                src="../assets/society360/screenshot-1.jpg"
+                alt="Society360 screenshot 1"
+              />
+              <figcaption>Screen 1 — replace with your screenshot</figcaption>
+            </figure>
+            <figure class="media-slot">
+              <img
+                src="../assets/society360/screenshot-2.jpg"
+                alt="Society360 screenshot 2"
+              />
+              <figcaption>Screen 2 — replace with your screenshot</figcaption>
+            </figure>
+            <figure class="media-slot">
+              <img
+                src="../assets/society360/screenshot-3.jpg"
+                alt="Society360 screenshot 3"
+              />
+              <figcaption>Screen 3 — replace with your screenshot</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <span class="eyebrow">Walkthrough</span>
+          <h2>Project <em>video</em></h2>
+          <div class="video-wrap">
+            <div class="placeholder">
+              To add a video, put an MP4 file in
+              <code>assets/society360/</code> and replace
+              <code>project-demo.mp4</code> in the video source below. You can
+              also use a YouTube embed if your demo is hosted there.
+            </div>
+            <video controls preload="metadata" style="margin-top: 16px">
+              <source
+                src="../assets/society360/project-demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support HTML video.
+            </video>
+          </div>
         </div>
       </section>
     </main>
-
     <footer>
       <div class="wrap">
-        <span>&copy; <span id="yr"></span> Safana</span
-        ><a href="#top">Back to top</a>
+        © <span id="yr"></span> Safana ·
+        <a href="../index.html">Portfolio home</a>
       </div>
     </footer>
-
     <script>
-      (function () {
-        // Cool slate and soft-grey tones to match the white/grey portfolio theme.
-        var g = "#344454",
-          m = "#8b9aaa",
-          p = "#e6ebf0";
-        function svg(x) {
-          return (
-            '<svg viewBox="0 0 320 260" role="img" aria-hidden="true">' +
-            x +
-            "</svg>"
-          );
-        }
-        var slides = [
-          {
-            tab: "Foundation",
-            when: "The foundation",
-            title: "B.E. in Electrical and Electronics Engineering",
-            body: "Graduated with 76.12%, First Class with Distinction. This is where the problem-solving habit started.",
-            fact: "B.E., 76.12%",
-            art: svg(
-              '<rect x="40" y="170" width="240" height="14" fill="' +
-                g +
-                '"/><rect x="60" y="184" width="200" height="10" fill="' +
-                m +
-                '"/><polygon points="160,50 270,100 160,150 50,100" fill="' +
-                g +
-                '"/><polygon points="160,62 245,100 160,138 75,100" fill="' +
-                p +
-                '"/><line x1="270" y1="100" x2="270" y2="150" stroke="' +
-                g +
-                '" stroke-width="4"/><circle cx="270" cy="154" r="7" fill="' +
-                m +
-                '"/>'
-            ),
-          },
-          {
-            tab: "Infosys",
-            when: "The professional beginning",
-            title: "Software development at Infosys",
-            body: "Nearly four years on enterprise projects, recognised with the Bravo and Champ awards.",
-            fact: "Bravo and Champ awards",
-            art: svg(
-              '<rect x="50" y="50" width="220" height="140" fill="' +
-                p +
-                '" stroke="' +
-                g +
-                '" stroke-width="4"/><rect x="50" y="50" width="220" height="22" fill="' +
-                g +
-                '"/><path d="M95 105 L75 125 L95 145" fill="none" stroke="' +
-                g +
-                '" stroke-width="6"/><path d="M225 105 L245 125 L225 145" fill="none" stroke="' +
-                g +
-                '" stroke-width="6"/><line x1="175" y1="100" x2="145" y2="150" stroke="' +
-                m +
-                '" stroke-width="6"/><rect x="120" y="190" width="80" height="14" fill="' +
-                g +
-                '"/><rect x="95" y="204" width="130" height="8" fill="' +
-                m +
-                '"/>'
-            ),
-          },
-          {
-            tab: "Career break",
-            when: "A different chapter",
-            title: "A planned career break",
-            body: "Time focused on family, while I kept learning and tutoring.",
-            fact: "Family first, learning throughout",
-            art: svg(
-              '<path d="M60 200 L60 90 Q110 70 160 90 L160 200 Q110 180 60 200Z" fill="' +
-                p +
-                '" stroke="' +
-                g +
-                '" stroke-width="4"/><path d="M160 90 Q210 70 260 90 L260 200 Q210 180 160 200Z" fill="' +
-                p +
-                '" stroke="' +
-                g +
-                '" stroke-width="4"/><line x1="85" y1="115" x2="140" y2="108" stroke="' +
-                m +
-                '" stroke-width="4"/><line x1="85" y1="135" x2="140" y2="128" stroke="' +
-                m +
-                '" stroke-width="4"/><line x1="185" y1="108" x2="240" y2="115" stroke="' +
-                m +
-                '" stroke-width="4"/><line x1="185" y1="128" x2="240" y2="135" stroke="' +
-                m +
-                '" stroke-width="4"/><circle cx="160" cy="48" r="14" fill="' +
-                g +
-                '"/>'
-            ),
-          },
-          {
-            tab: "Comeback",
-            when: "The comeback",
-            title: "ServiceNow RiseUp and CSA",
-            body: "Became a Certified System Administrator and led the Society360 capstone project.",
-            fact: "ServiceNow RiseUp graduate, CSA certified",
-            link: true,
-            art: svg(
-              '<rect x="60" y="150" width="60" height="50" fill="' +
-                m +
-                '"/><rect x="130" y="110" width="60" height="90" fill="' +
-                g +
-                '"/><rect x="200" y="150" width="60" height="50" fill="' +
-                m +
-                '"/><polygon points="160,40 169,64 195,64 174,79 182,104 160,89 138,104 146,79 125,64 151,64" fill="' +
-                g +
-                '"/>'
-            ),
-          },
-          {
-            tab: "Next",
-            when: "What's next",
-            title: "Application development",
-            body: "Currently learning ServiceNow Application Development and preparing for the CAD exam.",
-            fact: "Goal: Certified Application Developer",
-            art: svg(
-              '<path d="M40 210 L110 210 L110 170 L180 170 L180 130 L250 130 L250 90" fill="none" stroke="' +
-                g +
-                '" stroke-width="6"/><circle cx="110" cy="210" r="8" fill="' +
-                g +
-                '"/><circle cx="180" cy="170" r="8" fill="' +
-                g +
-                '"/><circle cx="250" cy="130" r="8" fill="' +
-                m +
-                '"/><polygon points="250,50 275,90 225,90" fill="' +
-                g +
-                '"/>'
-            ),
-          },
-        ];
-        var n = slides.length,
-          i = 0,
-          dots = document.getElementById("dots");
-        function $(id) {
-          return document.getElementById(id);
-        }
-        for (var k = 0; k < n; k++) {
-          (function (k) {
-            var b = document.createElement("button");
-            b.type = "button";
-            b.textContent = slides[k].tab;
-            b.onclick = function () {
-              go(k);
-            };
-            dots.appendChild(b);
-          })(k);
-        }
-        function go(x) {
-          i = (x + n) % n;
-          var s = slides[i];
-          $("art").innerHTML = s.art;
-          $("when").textContent = s.when;
-          $("title").textContent = s.title;
-          $("body").textContent = s.body;
-          $("fact").textContent = s.fact;
-          $("link").hidden = !s.link;
-          $("count").textContent = i + 1 + " / " + n;
-          Array.prototype.forEach.call(dots.children, function (b, j) {
-            b.setAttribute("aria-current", j === i);
-          });
-          var st = $("stage");
-          st.classList.remove("fade");
-          void st.offsetWidth;
-          st.classList.add("fade");
-          start();
-        }
-        $("prev").onclick = function () {
-          go(i - 1);
-        };
-        $("next").onclick = function () {
-          go(i + 1);
-        };
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "ArrowLeft") go(i - 1);
-          if (e.key === "ArrowRight") go(i + 1);
-        });
-        $("yr").textContent = new Date().getFullYear();
-
-        // ---- Auto-play ----
-        var delay = 6000, // 6 seconds per slide
-          timer = null,
-          paused = false,
-          hover = false,
-          reduce = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-          ).matches,
-          car = document.querySelector(".car"),
-          play = $("play");
-
-        function stop() {
-          if (timer) {
-            clearInterval(timer);
-            timer = null;
-          }
-        }
-        function start() {
-          stop();
-          if (!paused && !hover && !reduce) {
-            timer = setInterval(function () {
-              go(i + 1);
-            }, delay);
-          }
-        }
-        play.onclick = function () {
-          paused = !paused;
-          play.innerHTML = paused ? "&#9654;" : "&#10073;&#10073;";
-          play.setAttribute(
-            "aria-label",
-            paused ? "Start auto-play" : "Pause auto-play"
-          );
-          start();
-        };
-        car.addEventListener("mouseenter", function () {
-          hover = true;
-          stop();
-        });
-        car.addEventListener("mouseleave", function () {
-          hover = false;
-          start();
-        });
-        car.addEventListener("focusin", function () {
-          hover = true;
-          stop();
-        });
-        car.addEventListener("focusout", function () {
-          hover = false;
-          start();
-        });
-        if (reduce) play.hidden = true;
-
-        go(0);
-      })();
+      document.getElementById("yr").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
