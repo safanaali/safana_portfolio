@@ -809,4 +809,73 @@
           $("art").innerHTML = s.art;
           $("when").textContent = s.when;
           $("title").textContent = s.title;
-          $("body").textContent =
+          $("body").textContent = s.body;
+          $("fact").textContent = s.fact;
+          $("link").hidden = !s.link;
+          $("count").textContent = i + 1 + " / " + n;
+          Array.prototype.forEach.call(dots.children, function (b, j) {
+            b.setAttribute("aria-current", j === i);
+          });
+          var st = $("stage");
+          st.classList.remove("fade");
+          void st.offsetWidth;
+          st.classList.add("fade");
+          if (!auto) start(); // restart the timer after a manual change
+        }
+
+        function setPlaying(v) {
+          playing = v;
+          var pb = $("play");
+          pb.innerHTML = v ? "&#10074;&#10074;" : "&#9654;";
+          pb.setAttribute(
+            "aria-label",
+            v ? "Pause automatic slideshow" : "Play automatic slideshow"
+          );
+          // Announce slide changes to screen readers only when not auto-playing
+          $("stage").setAttribute("aria-live", v ? "off" : "polite");
+          start();
+        }
+
+        $("prev").onclick = function () {
+          go(i - 1);
+        };
+        $("next").onclick = function () {
+          go(i + 1);
+        };
+        $("play").onclick = function () {
+          setPlaying(!playing);
+        };
+
+        var car = $("car");
+        // Pause while the visitor hovers or has keyboard focus inside the carousel
+        car.addEventListener("mouseenter", function () {
+          hovering = true;
+          stop();
+        });
+        car.addEventListener("mouseleave", function () {
+          hovering = false;
+          start();
+        });
+        car.addEventListener("focusin", function () {
+          hovering = true;
+          stop();
+        });
+        car.addEventListener("focusout", function () {
+          hovering = false;
+          start();
+        });
+        // Pause when the browser tab is in the background
+        document.addEventListener("visibilitychange", start);
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowLeft") go(i - 1);
+          if (e.key === "ArrowRight") go(i + 1);
+        });
+
+        $("yr").textContent = new Date().getFullYear();
+        go(0, true);
+        setPlaying(playing);
+      })();
+    </script>
+  </body>
+</html>
