@@ -15,31 +15,30 @@
       rel="stylesheet"
     />
     <style>
-    :root {
+      :root {
         --bg: #f7f8fa;
         --soft: #eef1f4;
         --line: #dce1e6;
         --ink: #202832;
         --text: #4b5563;
-        --mute: #77818c;
+        --mute: #6b7580;
         --accent: #788797;
         --dark: #252c34;
-        --max: 1080px;
+        --max: 1160px;
       }
       * {
         box-sizing: border-box;
         margin: 0;
       }
-     html {
-  scroll-behavior: smooth;
-  font-size: 112.5%;
-}
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
         color: var(--text);
         background: var(--bg);
         line-height: 1.7;
-        font-size: 1rem;
+        font-size: 18px;
       }
       a {
         color: inherit;
@@ -51,7 +50,7 @@
       .wrap {
         max-width: var(--max);
         margin: 0 auto;
-        padding: 0 24px;
+        padding: 0 28px;
       }
       h1,
       h2,
@@ -65,8 +64,8 @@
         font-style: italic;
       }
       .eyebrow {
-        font-size: 0.72rem;
-        letter-spacing: 0.22em;
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--mute);
         font-weight: 600;
@@ -84,11 +83,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 64px;
+        height: 72px;
       }
       .logo {
         font-family: "Cormorant Garamond", serif;
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 600;
         color: var(--ink);
         text-decoration: none;
@@ -99,11 +98,11 @@
       }
       nav ul {
         display: flex;
-        gap: 28px;
+        gap: 30px;
         list-style: none;
         padding: 0;
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
+        font-size: 0.85rem;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         font-weight: 600;
       }
@@ -127,7 +126,7 @@
       }
       .hero p.lead {
         max-width: 52ch;
-        font-size: 1.05rem;
+        font-size: 1.15rem;
       }
       .btns {
         display: flex;
@@ -139,9 +138,9 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 13px 26px;
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
+        padding: 14px 28px;
+        font-size: 0.85rem;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
@@ -160,15 +159,17 @@
       }
 
       .journey {
-        padding: 12px 24px 36px;
+        padding: 28px 28px 48px;
       }
       .journey h2 {
-        font-size: clamp(2rem, 4.5vw, 3rem);
-        margin: 6px 0 8px;
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        margin: 8px 0 10px;
+        line-height: 1.1;
       }
       .journey .sub {
-        max-width: 54ch;
-        margin-bottom: 16px;
+        max-width: 58ch;
+        margin-bottom: 22px;
+        font-size: 1.1rem;
       }
       .car {
         border: 1px solid var(--line);
@@ -178,7 +179,7 @@
         display: grid;
         grid-template-columns: 1.1fr 1fr;
         background: var(--soft);
-        min-height: 300px;
+        min-height: 360px;
       }
       .art {
         background: var(--bg);
@@ -186,45 +187,48 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 24px;
       }
       .art svg {
         width: 100%;
-        max-width: 360px;
+        max-width: 380px;
         height: auto;
       }
       .txt {
-        padding: 22px;
+        padding: 32px 36px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
       .txt small {
         color: var(--accent);
-        font-size: 0.72rem;
-        letter-spacing: 0.22em;
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
         font-weight: 600;
       }
       .txt h3 {
-        font-size: 2rem;
-        line-height: 1.15;
-        margin: 8px 0 12px;
+        font-size: 2.5rem;
+        line-height: 1.12;
+        margin: 10px 0 14px;
+      }
+      .txt p {
+        font-size: 1.1rem;
       }
       .fact {
-        margin-top: 18px;
-        padding-top: 14px;
+        margin-top: 20px;
+        padding-top: 16px;
         border-top: 1px solid var(--line);
-        font-size: 0.85rem;
+        font-size: 1rem;
         color: var(--mute);
       }
       .explore {
         display: inline-block;
-        margin-top: 16px;
+        margin-top: 18px;
         color: var(--ink);
         font-weight: 600;
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
       }
       .ctrl {
@@ -233,7 +237,7 @@
         justify-content: space-between;
         gap: 12px;
         flex-wrap: wrap;
-        padding: 14px 18px;
+        padding: 16px 20px;
         border-top: 1px solid var(--line);
         background: var(--bg);
       }
@@ -245,10 +249,10 @@
       .dots button {
         border: 1px solid var(--line);
         background: transparent;
-        padding: 6px 14px;
+        padding: 8px 16px;
         border-radius: 99px;
         font: inherit;
-        font-size: 0.8rem;
+        font-size: 0.92rem;
         cursor: pointer;
         color: var(--text);
       }
@@ -267,59 +271,71 @@
       }
       .count {
         color: var(--mute);
-        font-size: 0.85rem;
-        min-width: 3.2em;
+        font-size: 0.95rem;
+        min-width: 3.4em;
         text-align: right;
       }
       .arrows {
         display: flex;
         gap: 8px;
       }
-      .arrows button {
-        width: 42px;
-        height: 42px;
+      .arrows button,
+      .pp {
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
         border: 1px solid var(--ink);
         background: transparent;
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         cursor: pointer;
         color: var(--ink);
       }
-      .arrows button:hover {
+      .pp {
+        font-size: 0.8rem;
+      }
+      .arrows button:hover,
+      .pp:hover {
         background: var(--ink);
         color: var(--bg);
       }
 
       section.s {
-        padding: 42px 0;
+        padding: 56px 0;
         border-top: 1px solid var(--line);
       }
       section.alt {
         background: var(--soft);
       }
       .s h2.t {
-        font-size: clamp(2rem, 4.5vw, 3rem);
-        margin: 6px 0 18px;
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        margin: 8px 0 22px;
         line-height: 1.1;
+      }
+      .s p {
+        font-size: 1.1rem;
       }
       .cols {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
       }
       .card {
         background: var(--bg);
         border: 1px solid var(--line);
-        padding: 22px;
+        padding: 28px;
       }
       .card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 4px;
+        font-size: 1.75rem;
+        line-height: 1.2;
+        margin-bottom: 6px;
+      }
+      .card p {
+        font-size: 1.05rem;
       }
       .card .meta {
         color: var(--accent);
-        font-size: 0.72rem;
-        letter-spacing: 0.14em;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 12px;
@@ -330,46 +346,49 @@
         flex-direction: column;
         color: inherit;
         text-decoration: none;
-        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        transition: transform 180ms ease, border-color 180ms ease,
+          box-shadow 180ms ease;
       }
       .project-card:hover {
         transform: translateY(-4px);
         border-color: var(--accent);
-        box-shadow: 0 12px 28px rgba(25, 35, 45, 0.10);
+        box-shadow: 0 12px 28px rgba(25, 35, 45, 0.1);
       }
       .project-cta {
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 22px;
-        padding-top: 14px;
+        margin-top: 24px;
+        padding-top: 16px;
         border-top: 1px solid var(--line);
         color: var(--ink);
-        font-size: 0.78rem;
+        font-size: 0.88rem;
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
-      .project-cta span { font-size: 1.1rem; }
+      .project-cta span {
+        font-size: 1.2rem;
+      }
 
       .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 12px;
         list-style: none;
         padding: 0;
       }
       .tags li {
         border: 1px solid var(--line);
         background: var(--bg);
-        padding: 8px 18px;
+        padding: 10px 20px;
         border-radius: 99px;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .note {
         color: var(--mute);
-        font-size: 0.85rem;
-        margin-top: 16px;
+        font-size: 0.95rem !important;
+        margin-top: 18px;
       }
 
       /* Selected work uses the same light, neutral palette as the rest of the site. */
@@ -400,8 +419,8 @@
 
       footer {
         border-top: 1px solid var(--line);
-        padding: 22px 0;
-        font-size: 0.85rem;
+        padding: 26px 0;
+        font-size: 0.95rem;
         color: var(--mute);
       }
       footer .wrap {
@@ -412,6 +431,9 @@
       }
 
       @media (max-width: 760px) {
+        body {
+          font-size: 17px;
+        }
         .stage {
           grid-template-columns: 1fr;
         }
@@ -421,10 +443,13 @@
         }
         nav ul {
           gap: 14px;
-          font-size: 0.68rem;
+          font-size: 0.72rem;
         }
         .txt {
-          padding: 20px;
+          padding: 24px;
+        }
+        .txt h3 {
+          font-size: 2rem;
         }
         .hero {
           padding: 38px 0 26px;
@@ -432,7 +457,7 @@
       }
       @media (prefers-reduced-motion: no-preference) {
         .fade {
-          animation: fd 0.35s ease;
+          animation: fd 0.4s ease;
         }
         @keyframes fd {
           from {
@@ -468,7 +493,7 @@
     </header>
 
     <main id="top">
-<div class="wrap journey" id="journey">
+      <div class="wrap journey" id="journey">
         <span class="eyebrow">Career story</span>
         <h2>My <em>journey</em></h2>
         <p class="sub">
@@ -477,11 +502,12 @@
         </p>
         <div
           class="car"
+          id="car"
           role="region"
           aria-roledescription="carousel"
           aria-label="Career journey"
         >
-          <div class="stage" id="stage" aria-live="polite">
+          <div class="stage" id="stage" aria-live="off">
             <div class="art" id="art"></div>
             <div class="txt">
               <small id="when"></small>
@@ -502,11 +528,18 @@
             ></div>
             <div class="right">
               <span class="count" id="count"></span>
-             <div class="arrows">
-  <button id="play" aria-label="Pause auto-play">&#10073;&#10073;</button>
-  <button id="prev" aria-label="Previous slide">&#8592;</button>
-  <button id="next" aria-label="Next slide">&#8594;</button>
-</div>
+              <button
+                class="pp"
+                id="play"
+                type="button"
+                aria-label="Pause automatic slideshow"
+              >
+                &#10074;&#10074;
+              </button>
+              <div class="arrows">
+                <button id="prev" aria-label="Previous slide">&#8592;</button
+                ><button id="next" aria-label="Next slide">&#8594;</button>
+              </div>
             </div>
           </div>
         </div>
@@ -515,7 +548,7 @@
       <section class="s alt" id="about">
         <div class="wrap">
           <span class="eyebrow">About me</span>
-<p style="max-width: 68ch">
+          <p style="max-width: 68ch; margin-top: 8px">
             I am a software professional with nearly four years of experience at
             Infosys, now building a career in ServiceNow. I hold the CSA
             certification, led the Society360 capstone, and am working through
@@ -530,23 +563,35 @@
           <span class="eyebrow">Selected work</span>
           <h2 class="t">Projects built to <em>solve</em> real problems.</h2>
           <div class="cols">
-            <a class="card project-card" href="Society360.html" aria-label="Explore the Society360 project">
+            <a
+              class="card project-card"
+              href="Society360.html"
+              aria-label="Explore the Society360 project"
+            >
               <h3>Society360</h3>
               <p class="meta">RiseUp capstone &middot; First place</p>
               <p>
                 A society management portal, including a visitor management
                 module, built as a team on ServiceNow. I led the project.
               </p>
-              <span class="project-cta">Explore project <span aria-hidden="true">↗</span></span>
+              <span class="project-cta"
+                >Explore project <span aria-hidden="true">↗</span></span
+              >
             </a>
-            <a class="card project-card" href="projects/workspace-reservation.html" aria-label="Explore the Workspace Reservation Management project">
+            <a
+              class="card project-card"
+              href="projects/workspace-reservation.html"
+              aria-label="Explore the Workspace Reservation Management project"
+            >
               <h3>Workspace Reservation Management</h3>
               <p class="meta">Application development &middot; In progress</p>
               <p>
                 A ServiceNow application built through sprint-based coursework
                 as part of my CAD preparation.
               </p>
-              <span class="project-cta">Explore project <span aria-hidden="true">↗</span></span>
+              <span class="project-cta"
+                >Explore project <span aria-hidden="true">↗</span></span
+              >
             </a>
             <div class="card">
               <h3>Software developer, Infosys</h3>
@@ -557,7 +602,10 @@
               </p>
             </div>
           </div>
-          <p class="note">Select a project to explore its overview, screenshots and demo media.</p>
+          <p class="note">
+            Select a project to explore its overview, screenshots and demo
+            media.
+          </p>
         </div>
       </section>
 
@@ -643,19 +691,12 @@
             body: "Graduated with 76.12%, First Class with Distinction. This is where the problem-solving habit started.",
             fact: "B.E., 76.12%",
             art: svg(
-              '<rect x="40" y="170" width="240" height="14" fill="' +
-                g +
-                '"/><rect x="60" y="184" width="200" height="10" fill="' +
-                m +
-                '"/><polygon points="160,50 270,100 160,150 50,100" fill="' +
-                g +
-                '"/><polygon points="160,62 245,100 160,138 75,100" fill="' +
-                p +
-                '"/><line x1="270" y1="100" x2="270" y2="150" stroke="' +
-                g +
-                '" stroke-width="4"/><circle cx="270" cy="154" r="7" fill="' +
-                m +
-                '"/>'
+              '<rect x="40" y="170" width="240" height="14" fill="' + g + '"/>' +
+              '<rect x="60" y="184" width="200" height="10" fill="' + m + '"/>' +
+              '<polygon points="160,50 270,100 160,150 50,100" fill="' + g + '"/>' +
+              '<polygon points="160,62 245,100 160,138 75,100" fill="' + p + '"/>' +
+              '<line x1="270" y1="100" x2="270" y2="150" stroke="' + g + '" stroke-width="4"/>' +
+              '<circle cx="270" cy="154" r="7" fill="' + m + '"/>'
             ),
           },
           {
@@ -665,23 +706,13 @@
             body: "Nearly four years on enterprise projects, recognised with the Bravo and Champ awards.",
             fact: "Bravo and Champ awards",
             art: svg(
-              '<rect x="50" y="50" width="220" height="140" fill="' +
-                p +
-                '" stroke="' +
-                g +
-                '" stroke-width="4"/><rect x="50" y="50" width="220" height="22" fill="' +
-                g +
-                '"/><path d="M95 105 L75 125 L95 145" fill="none" stroke="' +
-                g +
-                '" stroke-width="6"/><path d="M225 105 L245 125 L225 145" fill="none" stroke="' +
-                g +
-                '" stroke-width="6"/><line x1="175" y1="100" x2="145" y2="150" stroke="' +
-                m +
-                '" stroke-width="6"/><rect x="120" y="190" width="80" height="14" fill="' +
-                g +
-                '"/><rect x="95" y="204" width="130" height="8" fill="' +
-                m +
-                '"/>'
+              '<rect x="50" y="50" width="220" height="140" fill="' + p + '" stroke="' + g + '" stroke-width="4"/>' +
+              '<rect x="50" y="50" width="220" height="22" fill="' + g + '"/>' +
+              '<path d="M95 105 L75 125 L95 145" fill="none" stroke="' + g + '" stroke-width="6"/>' +
+              '<path d="M225 105 L245 125 L225 145" fill="none" stroke="' + g + '" stroke-width="6"/>' +
+              '<line x1="175" y1="100" x2="145" y2="150" stroke="' + m + '" stroke-width="6"/>' +
+              '<rect x="120" y="190" width="80" height="14" fill="' + g + '"/>' +
+              '<rect x="95" y="204" width="130" height="8" fill="' + m + '"/>'
             ),
           },
           {
@@ -691,25 +722,13 @@
             body: "Time focused on family, while I kept learning and tutoring.",
             fact: "Family first, learning throughout",
             art: svg(
-              '<path d="M60 200 L60 90 Q110 70 160 90 L160 200 Q110 180 60 200Z" fill="' +
-                p +
-                '" stroke="' +
-                g +
-                '" stroke-width="4"/><path d="M160 90 Q210 70 260 90 L260 200 Q210 180 160 200Z" fill="' +
-                p +
-                '" stroke="' +
-                g +
-                '" stroke-width="4"/><line x1="85" y1="115" x2="140" y2="108" stroke="' +
-                m +
-                '" stroke-width="4"/><line x1="85" y1="135" x2="140" y2="128" stroke="' +
-                m +
-                '" stroke-width="4"/><line x1="185" y1="108" x2="240" y2="115" stroke="' +
-                m +
-                '" stroke-width="4"/><line x1="185" y1="128" x2="240" y2="135" stroke="' +
-                m +
-                '" stroke-width="4"/><circle cx="160" cy="48" r="14" fill="' +
-                g +
-                '"/>'
+              '<path d="M60 200 L60 90 Q110 70 160 90 L160 200 Q110 180 60 200Z" fill="' + p + '" stroke="' + g + '" stroke-width="4"/>' +
+              '<path d="M160 90 Q210 70 260 90 L260 200 Q210 180 160 200Z" fill="' + p + '" stroke="' + g + '" stroke-width="4"/>' +
+              '<line x1="85" y1="115" x2="140" y2="108" stroke="' + m + '" stroke-width="4"/>' +
+              '<line x1="85" y1="135" x2="140" y2="128" stroke="' + m + '" stroke-width="4"/>' +
+              '<line x1="185" y1="108" x2="240" y2="115" stroke="' + m + '" stroke-width="4"/>' +
+              '<line x1="185" y1="128" x2="240" y2="135" stroke="' + m + '" stroke-width="4"/>' +
+              '<circle cx="160" cy="48" r="14" fill="' + g + '"/>'
             ),
           },
           {
@@ -720,15 +739,10 @@
             fact: "ServiceNow RiseUp graduate, CSA certified",
             link: true,
             art: svg(
-              '<rect x="60" y="150" width="60" height="50" fill="' +
-                m +
-                '"/><rect x="130" y="110" width="60" height="90" fill="' +
-                g +
-                '"/><rect x="200" y="150" width="60" height="50" fill="' +
-                m +
-                '"/><polygon points="160,40 169,64 195,64 174,79 182,104 160,89 138,104 146,79 125,64 151,64" fill="' +
-                g +
-                '"/>'
+              '<rect x="60" y="150" width="60" height="50" fill="' + m + '"/>' +
+              '<rect x="130" y="110" width="60" height="90" fill="' + g + '"/>' +
+              '<rect x="200" y="150" width="60" height="50" fill="' + m + '"/>' +
+              '<polygon points="160,40 169,64 195,64 174,79 182,104 160,89 138,104 146,79 125,64 151,64" fill="' + g + '"/>'
             ),
           },
           {
@@ -738,26 +752,30 @@
             body: "Currently learning ServiceNow Application Development and preparing for the CAD exam.",
             fact: "Goal: Certified Application Developer",
             art: svg(
-              '<path d="M40 210 L110 210 L110 170 L180 170 L180 130 L250 130 L250 90" fill="none" stroke="' +
-                g +
-                '" stroke-width="6"/><circle cx="110" cy="210" r="8" fill="' +
-                g +
-                '"/><circle cx="180" cy="170" r="8" fill="' +
-                g +
-                '"/><circle cx="250" cy="130" r="8" fill="' +
-                m +
-                '"/><polygon points="250,50 275,90 225,90" fill="' +
-                g +
-                '"/>'
+              '<path d="M40 210 L110 210 L110 170 L180 170 L180 130 L250 130 L250 90" fill="none" stroke="' + g + '" stroke-width="6"/>' +
+              '<circle cx="110" cy="210" r="8" fill="' + g + '"/>' +
+              '<circle cx="180" cy="170" r="8" fill="' + g + '"/>' +
+              '<circle cx="250" cy="130" r="8" fill="' + m + '"/>' +
+              '<polygon points="250,50 275,90 225,90" fill="' + g + '"/>'
             ),
           },
         ];
+
+        var DELAY = 5000; // time per slide in milliseconds (5000 = 5 seconds)
         var n = slides.length,
           i = 0,
-          dots = document.getElementById("dots");
+          timer = null,
+          dots = document.getElementById("dots"),
+          reduced =
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+          playing = !reduced, // user's choice: auto-play on or off
+          hovering = false;
+
         function $(id) {
           return document.getElementById(id);
         }
+
         for (var k = 0; k < n; k++) {
           (function (k) {
             var b = document.createElement("button");
@@ -769,74 +787,26 @@
             dots.appendChild(b);
           })(k);
         }
-        function go(x) {
+
+        function stop() {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+        }
+        function start() {
+          stop();
+          if (playing && !hovering && !document.hidden) {
+            timer = setInterval(function () {
+              go(i + 1, true);
+            }, DELAY);
+          }
+        }
+
+        function go(x, auto) {
           i = (x + n) % n;
           var s = slides[i];
           $("art").innerHTML = s.art;
           $("when").textContent = s.when;
           $("title").textContent = s.title;
-          $("body").textContent = s.body;
-          $("fact").textContent = s.fact;
-          $("link").hidden = !s.link;
-          $("count").textContent = i + 1 + " / " + n;
-          Array.prototype.forEach.call(dots.children, function (b, j) {
-            b.setAttribute("aria-current", j === i);
-          });
-          var st = $("stage");
-          st.classList.remove("fade");
-          void st.offsetWidth;
-          st.classList.add("fade");
-          start();
-        }
-        $("prev").onclick = function () {
-          go(i - 1);
-        };
-        $("next").onclick = function () {
-          go(i + 1);
-        };
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "ArrowLeft") go(i - 1);
-          if (e.key === "ArrowRight") go(i + 1);
-        });
-        $("yr").textContent = new Date().getFullYear();
-
-// ---- Auto-play ----
-var delay = 6000, // 6 seconds per slide
-  timer = null,
-  paused = false,
-  hover = false,
-  reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  car = document.querySelector(".car"),
-  play = $("play");
-
-function stop() {
-  if (timer) {
-    clearInterval(timer);
-    timer = null;
-  }
-}
-function start() {
-  stop();
-  if (!paused && !hover && !reduce) {
-    timer = setInterval(function () {
-      go(i + 1);
-    }, delay);
-  }
-}
-play.onclick = function () {
-  paused = !paused;
-  play.innerHTML = paused ? "&#9654;" : "&#10073;&#10073;";
-  play.setAttribute("aria-label", paused ? "Start auto-play" : "Pause auto-play");
-  start();
-};
-car.addEventListener("mouseenter", function () { hover = true; stop(); });
-car.addEventListener("mouseleave", function () { hover = false; start(); });
-car.addEventListener("focusin", function () { hover = true; stop(); });
-car.addEventListener("focusout", function () { hover = false; start(); });
-if (reduce) play.hidden = true;
-
-go(0);
-      })();
-    </script>
-  </body>
-</html>
+          $("body").textContent =
