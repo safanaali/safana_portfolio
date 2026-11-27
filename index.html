@@ -30,15 +30,16 @@
         box-sizing: border-box;
         margin: 0;
       }
-      html {
-        scroll-behavior: smooth;
-      }
+     html {
+  scroll-behavior: smooth;
+  font-size: 112.5%;
+}
       body {
         font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
         color: var(--text);
         background: var(--bg);
         line-height: 1.7;
-        font-size: 16px;
+        font-size: 1rem;
       }
       a {
         color: inherit;
@@ -420,7 +421,7 @@
         }
         nav ul {
           gap: 14px;
-          font-size: 0.62rem;
+          font-size: 0.68rem;
         }
         .txt {
           padding: 20px;
@@ -501,10 +502,11 @@
             ></div>
             <div class="right">
               <span class="count" id="count"></span>
-              <div class="arrows">
-                <button id="prev" aria-label="Previous slide">&#8592;</button
-                ><button id="next" aria-label="Next slide">&#8594;</button>
-              </div>
+             <div class="arrows">
+  <button id="play" aria-label="Pause auto-play">&#10073;&#10073;</button>
+  <button id="prev" aria-label="Previous slide">&#8592;</button>
+  <button id="next" aria-label="Next slide">&#8594;</button>
+</div>
             </div>
           </div>
         </div>
@@ -784,6 +786,7 @@
           st.classList.remove("fade");
           void st.offsetWidth;
           st.classList.add("fade");
+          start();
         }
         $("prev").onclick = function () {
           go(i - 1);
@@ -796,7 +799,43 @@
           if (e.key === "ArrowRight") go(i + 1);
         });
         $("yr").textContent = new Date().getFullYear();
-        go(0);
+
+// ---- Auto-play ----
+var delay = 6000, // 6 seconds per slide
+  timer = null,
+  paused = false,
+  hover = false,
+  reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  car = document.querySelector(".car"),
+  play = $("play");
+
+function stop() {
+  if (timer) {
+    clearInterval(timer);
+    timer = null;
+  }
+}
+function start() {
+  stop();
+  if (!paused && !hover && !reduce) {
+    timer = setInterval(function () {
+      go(i + 1);
+    }, delay);
+  }
+}
+play.onclick = function () {
+  paused = !paused;
+  play.innerHTML = paused ? "&#9654;" : "&#10073;&#10073;";
+  play.setAttribute("aria-label", paused ? "Start auto-play" : "Pause auto-play");
+  start();
+};
+car.addEventListener("mouseenter", function () { hover = true; stop(); });
+car.addEventListener("mouseleave", function () { hover = false; start(); });
+car.addEventListener("focusin", function () { hover = true; stop(); });
+car.addEventListener("focusout", function () { hover = false; start(); });
+if (reduce) play.hidden = true;
+
+go(0);
       })();
     </script>
   </body>
