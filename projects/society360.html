@@ -141,18 +141,6 @@
       .video-wrap {
         max-width: 850px;
       }
-      video {
-        width: 100%;
-        background: #202832;
-        border-radius: 8px;
-      }
-      .placeholder {
-        padding: 26px;
-        background: var(--soft);
-        border: 1px dashed #b8c2cc;
-        border-radius: 6px;
-        font-size: 0.9rem;
-      }
       footer {
         border-top: 1px solid var(--line);
         padding: 28px 0;
@@ -173,15 +161,15 @@
         margin: 7px 0;
       }
       .media-slot.wide {
-  grid-column: 1 / -1;
-}
-.media-slot img.full {
-  aspect-ratio: auto;
-  height: auto;
-  object-fit: contain;
-  max-width: 760px;
-  margin: 0 auto;
-}
+        grid-column: 1 / -1;
+      }
+      .media-slot img.full {
+        aspect-ratio: auto;
+        height: auto;
+        object-fit: contain;
+        max-width: 760px;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -230,46 +218,46 @@
             then replace the sample image paths below with your file names.
           </p>
           <div class="media-grid" style="margin-top: 22px">
-          <figure class="media-slot wide">
-  <img
-    class="full"
-    src="../assets/society360/1.jpeg"
-    alt="Society360"
-  />
-  <figcaption>Society360 overview</figcaption>
-</figure>
-          <figure class="media-slot wide">
-  <img
-    class="full"
-    src="../assets/society360/2.jpeg"
-    alt="Society360"
-  />
-  <figcaption>Society360 overview</figcaption>
-</figure>
-           <figure class="media-slot wide">
-  <img
-    class="full"
-    src="../assets/society360/3.jpeg"
-    alt="Society360"
-  />
-  <figcaption>Society360 overview</figcaption>
-</figure>
             <figure class="media-slot wide">
-  <img
-    class="full"
-    src="../assets/society360/4.jpeg"
-    alt="Society360"
-  />
-  <figcaption>Society360 overview</figcaption>
-</figure>
+              <img
+                class="full"
+                src="../assets/society360/1.jpeg"
+                alt="Society360"
+              />
+              <figcaption>Society360 overview</figcaption>
+            </figure>
             <figure class="media-slot wide">
-  <img
-    class="full"
-    src="../assets/society360/5.jpeg"
-    alt="Society360"
-  />
-  <figcaption>Society360 overview</figcaption>
-</figure>
+              <img
+                class="full"
+                src="../assets/society360/2.jpeg"
+                alt="Society360"
+              />
+              <figcaption>Society360 overview</figcaption>
+            </figure>
+            <figure class="media-slot wide">
+              <img
+                class="full"
+                src="../assets/society360/3.jpeg"
+                alt="Society360"
+              />
+              <figcaption>Society360 overview</figcaption>
+            </figure>
+            <figure class="media-slot wide">
+              <img
+                class="full"
+                src="../assets/society360/4.jpeg"
+                alt="Society360"
+              />
+              <figcaption>Society360 overview</figcaption>
+            </figure>
+            <figure class="media-slot wide">
+              <img
+                class="full"
+                src="../assets/society360/5.jpeg"
+                alt="Society360"
+              />
+              <figcaption>Society360 overview</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -278,19 +266,31 @@
           <span class="eyebrow">Walkthrough</span>
           <h2>Project <em>video</em></h2>
           <div class="video-wrap">
-            <div class="placeholder">
-              To add a video, put an MP4 file in
-              <code>assets/society360/</code> and replace
-              <code>project-demo.mp4</code> in the video source below. You can
-              also use a YouTube embed if your demo is hosted there.
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #202832;
+              "
+            >
+              <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Society360 project walkthrough"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: 0;
+                "
+              ></iframe>
             </div>
-            <video controls preload="metadata" style="margin-top: 16px">
-              <source
-                src="../assets/society360/project-demo.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support HTML video.
-            </video>
           </div>
         </div>
       </section>
