@@ -118,8 +118,27 @@
         outline-color: #c3cdd8;
       }
 
+      /* about with photo */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .about-photo {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border: 1px solid var(--line);
+        display: block;
+      }
+
+      /* journey carousel */
+      .jsec {
+        border-top: 1px solid var(--line);
+      }
       .journey {
-        padding: 28px 28px 48px;
+        padding: 56px 28px 56px;
       }
       .journey h2 {
         font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -142,12 +161,24 @@
         min-height: 360px;
       }
       .art {
+        position: relative;
+        overflow: hidden;
         background: var(--bg);
         border-right: 1px solid var(--line);
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      .art.icon {
         padding: 24px;
+      }
+      .art img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
       .art svg {
         width: 100%;
@@ -265,6 +296,10 @@
       }
       section.alt {
         background: var(--soft);
+      }
+      #about {
+        border-top: 0;
+        padding: 64px 0;
       }
       .s h2.t {
         font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -420,10 +455,18 @@
         body {
           font-size: 17px;
         }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .about-photo {
+          max-width: 260px;
+        }
         .stage {
           grid-template-columns: 1fr;
         }
         .art {
+          min-height: 260px;
           border-right: 0;
           border-bottom: 1px solid var(--line);
         }
@@ -456,28 +499,6 @@
           scroll-behavior: auto;
         }
       }
-      .about-grid {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 48px;
-  align-items: center;
-}
-.about-photo {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border: 1px solid var(--line);
-  display: block;
-}
-@media (max-width: 760px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .about-photo {
-    max-width: 260px;
-  }
-}
     </style>
   </head>
   <body>
@@ -486,8 +507,8 @@
         <nav aria-label="Main">
           <a class="logo" href="#top">Safana<span> </span></a>
           <ul>
-            <li><a href="#journey">Journey</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#journey">Journey</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#certs">Certifications</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -498,66 +519,14 @@
     </header>
 
     <main id="top">
-      <div class="wrap journey" id="journey">
-        <span class="eyebrow">Career story</span>
-        <h2>My <em>journey</em></h2>
-        <p class="sub">
-          From engineering graduate to Infosys developer, a planned career
-          break, and a return as a certified ServiceNow professional.
-        </p>
-        <div
-          class="car"
-          id="car"
-          role="region"
-          aria-roledescription="carousel"
-          aria-label="Career journey"
-        >
-          <div class="stage" id="stage" aria-live="off">
-            <div class="art" id="art"></div>
-            <div class="txt">
-              <small id="when"></small>
-              <h3 id="title"></h3>
-              <p id="body"></p>
-              <div class="fact" id="fact"></div>
-              <a class="explore" id="link" href="#work" hidden
-                >See the projects &rarr;</a
-              >
-            </div>
-          </div>
-          <div class="ctrl">
-            <div
-              class="dots"
-              id="dots"
-              role="group"
-              aria-label="Choose slide"
-            ></div>
-            <div class="right">
-              <span class="count" id="count"></span>
-              <button
-                class="pp"
-                id="play"
-                type="button"
-                aria-label="Pause automatic slideshow"
-              >
-                &#10074;&#10074;
-              </button>
-              <div class="arrows">
-                <button id="prev" aria-label="Previous slide">&#8592;</button
-                ><button id="next" aria-label="Next slide">&#8594;</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-           <section class="s alt" id="about">
+      <section class="s alt" id="about">
         <div class="wrap about-grid">
           <img
             class="about-photo"
-            src="safana.jpg"
+            src="images/safana.jpg"
             alt="Portrait of Safana"
-            width="800"
-            height="400"
+            width="640"
+            height="800"
           />
           <div>
             <span class="eyebrow">About me</span>
@@ -573,6 +542,60 @@
         </div>
       </section>
 
+      <section class="jsec" id="journey">
+        <div class="wrap journey">
+          <span class="eyebrow">Career story</span>
+          <h2>My <em>journey</em></h2>
+          <p class="sub">
+            From engineering graduate to Infosys developer, a planned career
+            break, and a return as a certified ServiceNow professional.
+          </p>
+          <div
+            class="car"
+            id="car"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Career journey"
+          >
+            <div class="stage" id="stage" aria-live="off">
+              <div class="art" id="art"></div>
+              <div class="txt">
+                <small id="when"></small>
+                <h3 id="title"></h3>
+                <p id="body"></p>
+                <div class="fact" id="fact"></div>
+                <a class="explore" id="link" href="#work" hidden
+                  >See the projects &rarr;</a
+                >
+              </div>
+            </div>
+            <div class="ctrl">
+              <div
+                class="dots"
+                id="dots"
+                role="group"
+                aria-label="Choose slide"
+              ></div>
+              <div class="right">
+                <span class="count" id="count"></span>
+                <button
+                  class="pp"
+                  id="play"
+                  type="button"
+                  aria-label="Pause automatic slideshow"
+                >
+                  &#10074;&#10074;
+                </button>
+                <div class="arrows">
+                  <button id="prev" aria-label="Previous slide">&#8592;</button
+                  ><button id="next" aria-label="Next slide">&#8594;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="s dark" id="work">
         <div class="wrap">
           <span class="eyebrow">Selected work</span>
@@ -582,7 +605,7 @@
           <div class="cols">
             <a
               class="card project-card"
-              href="Society360.html"
+              href="projects/Society360.html"
               aria-label="Explore the Society360 project"
             >
               <h3>Society360</h3>
@@ -819,6 +842,8 @@
             "</svg>"
           );
         }
+        // Slide pictures: images/1.jpg ... images/5.jpg (in slide order).
+        // If a picture is missing, the drawn icon is shown instead.
         var slides = [
           {
             tab: "Foundation",
@@ -897,7 +922,7 @@
           },
         ];
 
-        var DELAY = 2000; // time per slide in milliseconds (2000 = 3 seconds)
+        var DELAY = 5000; // time per slide in milliseconds (5000 = 5 seconds)
         var n = slides.length,
           i = 0,
           timer = null,
@@ -942,7 +967,17 @@
         function go(x, auto) {
           i = (x + n) % n;
           var s = slides[i];
-          $("art").innerHTML = s.art;
+          var art = $("art");
+          art.className = "art";
+          art.innerHTML = "";
+          var img = new Image();
+          img.alt = s.title;
+          img.onerror = function () {
+            art.className = "art icon";
+            art.innerHTML = s.art;
+          };
+          img.src = "images/" + (i + 1) + ".jpg";
+          art.appendChild(img);
           $("when").textContent = s.when;
           $("title").textContent = s.title;
           $("body").textContent = s.body;
