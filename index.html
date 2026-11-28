@@ -119,6 +119,12 @@
       }
 
       /* about with photo */
+      .about-name {
+        text-align: center;
+        font-size: clamp(2.8rem, 6vw, 4.4rem);
+        line-height: 1.1;
+        margin-bottom: 36px;
+      }
       .about-grid {
         display: grid;
         grid-template-columns: 300px 1fr;
@@ -461,6 +467,7 @@
         }
         .about-photo {
           max-width: 260px;
+          margin: 0 auto;
         }
         .stage {
           grid-template-columns: 1fr;
@@ -520,24 +527,27 @@
 
     <main id="top">
       <section class="s alt" id="about">
-        <div class="wrap about-grid">
-          <img
-            class="about-photo"
-            src="images/safana.jpg"
-            alt="Portrait of Safana"
-            width="800"
-            height="400"
-          />
-          <div>
-            <span class="eyebrow">About me</span>
-            <p style="max-width: 62ch; margin-top: 8px">
-              I am a software professional with nearly four years of experience
-              at Infosys, now building a career in ServiceNow. I hold the CSA
-              certification, led the Society360 capstone, and am working through
-              application development. My earlier work with Java, JavaScript,
-              SQL and enterprise delivery shapes how I design ServiceNow
-              applications.
-            </p>
+        <div class="wrap">
+          <h1 class="about-name">Safana</h1>
+          <div class="about-grid">
+            <img
+              class="about-photo"
+              src="images/safana.jpg"
+              alt="Portrait of Safana"
+              width="640"
+              height="800"
+            />
+            <div>
+              <span class="eyebrow">About me</span>
+              <p style="max-width: 62ch; margin-top: 8px">
+                I am a software professional with nearly four years of
+                experience at Infosys, now building a career in ServiceNow. I
+                hold the CSA certification, led the Society360 capstone, and am
+                working through application development. My earlier work with
+                Java, JavaScript, SQL and enterprise delivery shapes how I
+                design ServiceNow applications.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -976,7 +986,7 @@
             art.className = "art icon";
             art.innerHTML = s.art;
           };
-          img.src = "images/" + (i + 1) + ".jpeg";
+          img.src = "images/" + (i + 1) + ".jpg";
           art.appendChild(img);
           $("when").textContent = s.when;
           $("title").textContent = s.title;
