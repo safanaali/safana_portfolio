@@ -81,8 +81,16 @@
         text-decoration: none;
         font-weight: 600;
       }
-      .hero {
-        padding: 76px 0 28px;
+
+      /* Two-column intro: RiseUp capstone (left) + Project overview (right) */
+      .intro {
+        padding: 56px 0 36px;
+      }
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: start;
       }
       .eyebrow {
         font-size: 0.72rem;
@@ -108,6 +116,9 @@
       section {
         padding: 32px 0;
         border-top: 1px solid var(--line);
+      }
+      section.intro {
+        border-top: 0;
       }
       h2 {
         font-size: clamp(2rem, 4vw, 3rem);
@@ -147,9 +158,13 @@
         color: var(--mute);
         font-size: 0.85rem;
       }
-      @media (max-width: 650px) {
-        .hero {
-          padding: 52px 0 24px;
+      @media (max-width: 860px) {
+        .intro {
+          padding: 40px 0 24px;
+        }
+        .intro-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
         }
       }
 
@@ -184,31 +199,34 @@
       </div>
     </header>
     <main>
-      <div class="wrap hero">
-        <span class="eyebrow">RiseUp capstone </span>
-        <h1>Society360</h1>
-        <p class="lead">
-          A ServiceNow society management portal developed as a team capstone. I
-          led the project and contributed to building a more organised digital
-          experience for residents and society administrators.
-        </p>
-      </div>
-      <section>
-        <div class="wrap">
-          <span class="eyebrow">Project overview</span>
-          <h2>What it <em>does</em></h2>
-          <p class="lead">
-            Society360 brings common society-management activities into one
-            portal, helping residents raise and track requests while making
-            information and services easier to access.
-          </p>
-          <ul>
-            <li>Resident-facing society management portal</li>
-            <li>Society dashboard</li>
-            <li>Maintenance Module</li>
-            <li>Pay Dues Module</li>
-            <li>Knowledge-based AI support and request handling</li>
-          </ul>
+      <section class="intro">
+        <div class="wrap intro-grid">
+          <div class="intro-left">
+            <span class="eyebrow">RiseUp capstone</span>
+            <h1>Society360</h1>
+            <p class="lead">
+              A ServiceNow society management portal developed as a team
+              capstone. I led the project and contributed to building a more
+              organised digital experience for residents and society
+              administrators.
+            </p>
+          </div>
+          <div class="intro-right">
+            <span class="eyebrow">Project overview</span>
+            <h2>What it <em>does</em></h2>
+            <p class="lead">
+              Society360 brings common society-management activities into one
+              portal, helping residents raise and track requests while making
+              information and services easier to access.
+            </p>
+            <ul>
+              <li>Resident-facing society management portal</li>
+              <li>Society dashboard</li>
+              <li>Maintenance Module</li>
+              <li>Pay Dues Module</li>
+              <li>Knowledge-based AI support and request handling</li>
+            </ul>
+          </div>
         </div>
       </section>
       <section>
@@ -241,14 +259,12 @@
                   border: 0;
                 "
               ></iframe>
-            
             </div>
           </div>
         </div>
       </section>
-       <section>
+      <section>
         <div class="wrap">
-         
           <h2>Feedback and <em>QA</em></h2>
           <div class="video-wrap">
             <div
@@ -263,7 +279,7 @@
             >
               <iframe
                 src="https://www.youtube.com/embed/sGkL2ds9N1I"
-                title="Society360 project Feedback, Q&A"
+                title="Society360 project Feedback, Q&amp;A"
                 loading="lazy"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
@@ -276,7 +292,6 @@
                   border: 0;
                 "
               ></iframe>
-            
             </div>
           </div>
         </div>
