@@ -456,6 +456,28 @@
           scroll-behavior: auto;
         }
       }
+      .about-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-photo {
+    max-width: 260px;
+  }
+}
     </style>
   </head>
   <body>
@@ -528,16 +550,26 @@
         </div>
       </div>
 
-      <section class="s alt" id="about">
-        <div class="wrap">
-          <span class="eyebrow">About me</span>
-          <p style="max-width: 68ch; margin-top: 8px">
-            I am a software professional with nearly four years of experience at
-            Infosys, now building a career in ServiceNow. I hold the CSA
-            certification, led the Society360 capstone, and am working through
-            application development. My earlier work with Java, JavaScript, SQL
-            and enterprise delivery shapes how I design ServiceNow applications.
-          </p>
+           <section class="s alt" id="about">
+        <div class="wrap about-grid">
+          <img
+            class="about-photo"
+            src="images/safana.jpg"
+            alt="Portrait of Safana"
+            width="640"
+            height="800"
+          />
+          <div>
+            <span class="eyebrow">About me</span>
+            <p style="max-width: 62ch; margin-top: 8px">
+              I am a software professional with nearly four years of experience
+              at Infosys, now building a career in ServiceNow. I hold the CSA
+              certification, led the Society360 capstone, and am working through
+              application development. My earlier work with Java, JavaScript,
+              SQL and enterprise delivery shapes how I design ServiceNow
+              applications.
+            </p>
+          </div>
         </div>
       </section>
 
